@@ -6,6 +6,10 @@ html {
   background-color: #fff9f0;
 }
 
+.text-parisienne {
+  font-family: 'Parisienne', cursive;
 }
 
+.text-roboto {
+  font-family: 'Roboto Condensed', sans-serif;
 }
