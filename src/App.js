@@ -1,11 +1,12 @@
 import './generated/tailwind.css'
 
 function App() {
+  const appClass = `h-full w-full bg-cream
+                    flex flex-col
+                    text-center text-navy text-roboto text-4xl`
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p className="text-green-500">This will eventually be our wedding website! Please ignore how it looks at the moment</p>
-      </header>
+    <div className={appClass}>
     </div>
   );
 }
