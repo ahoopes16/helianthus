@@ -1,4 +1,5 @@
 import './generated/tailwind.css'
+import sunflower from './img/sunflower.png'
 
 function App() {
   const appClass = `h-full w-full bg-cream
@@ -15,7 +16,19 @@ function App() {
       </div>
 
       <div className='flex flex-row justify-around my-24'>
+        <img
+          src={sunflower}
+          alt="sunflower graphic"
+          className="object-contain h-3/4 ml-24 -mt-20 transform -rotate-45 "
+        />
+
         <h2 className="text-6xl pt-24">#2haveand2hoopes</h2>
+
+        <img
+          src={sunflower}
+          alt="sunflower graphic"
+          className="object-contain h-3/4 mr-24 -mt-20 transform scale-x-flip rotate-45"
+        />
       </div>
 
     </div>
