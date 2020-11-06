@@ -1,15 +1,7 @@
 import './generated/tailwind.css'
+import Heading from './components/Heading'
 import sunflower from './img/sunflower.png'
 import MediaQuery from 'react-responsive'
-
-const headingStyles = {
-  sizes: 'xl:text-6xl lg:text-6xl md:text-5xl sm:text-4xl text-xl',
-  margins: 'xl:my-8 lg:my-8 md:my-12 sm:my-8 my-6',
-}
-
-const paragraphStyles = {
-  sizes: 'xl:text-4xl lg:text-4xl md:text-3xl sm:text-2xl text-sm'
-}
 
 const hashtagStyles = {
   sizes: 'xl:text-5xl lg:text-5xl md:text-4xl sm:text-3xl text-lg',
@@ -27,11 +19,12 @@ const sunflowerStyles = {
 function App() {
   const appClass = `h-full w-full bg-cream
                     flex flex-col
-                    text-center text-navy text-roboto ${paragraphStyles.sizes}`
+                    text-center text-navy text-roboto
+                    lg:text-4xl md:text-3xl sm:text-2xl text-sm`
 
   return (
     <div className={appClass}>
-      <h1 className={`text-parisienne ${headingStyles.sizes} ${headingStyles.margins}`}>Nikki & Alex's Wedding Website</h1>
+      <Heading className='lg:my-8 md:my-12 sm:my-8 my-6'>Nikki & Alex's Wedding Website</Heading>
 
       <div className="my-6">
         <p>Under Construction Until April 2021</p>
