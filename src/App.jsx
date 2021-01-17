@@ -1,24 +1,36 @@
 import './generated/tailwind.css'
-import Heading from './components/Heading'
-import EmphasizedText from './components/EmphasizedText'
+import logo from './img/logo.png'
 
 function App() {
-  const appClass = `h-full w-full bg-cream
-                    flex flex-col
-                    text-center text-navy text-roboto
-                    lg:text-4xl md:text-3xl sm:text-2xl text-sm`
+  const appClass = 'h-screen w-screen bg-steel'
 
   return (
     <div className={appClass}>
-      <Heading className='lg:my-8 md:my-12 sm:my-8 my-6'>Nikki & Alex's Wedding Website</Heading>
-
-      <div className="my-6">
-        <p>Under Construction Until April 2021</p>
-        <p>Come back then to RSVP and receive all wedding details!</p>
+      <div className='w-screen bg-navy text-gold text-parisienne text-5xl grid grid-cols-10'>
+        <div className='flex items-center justify-center'>
+          <img className='h-20 w-20' src={logo} alt='Logo' />
+        </div>
+        <div className='col-span-8'>
+          <h1 className='text-center py-4'>Nikki &#38; Alex &#8226; October 8, 2021</h1>
+        </div>
       </div>
 
+      <div className='h-screen text-gold text-roboto font-bold text-xl grid grid-cols-10'>
+        <div className='text-center bg-navy'>
+          <ul className='pt-8'>
+            <li className='py-4'>About</li>
+            <li className='py-4'>RSVP</li>
+            <li className='py-4'>FAQ</li>
+            <li className='py-4'>Travel</li>
+            <li className='py-4'>Lodging</li>
+            <li className='py-4'>Points of Interest</li>
+            <li className='py-4'>Engagement Photos</li>
+            <li className='py-4'>Gifts</li>
+          </ul>
+        </div>
+      </div>
     </div>
-  );
+  )
 }
 
 export default App;
