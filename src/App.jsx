@@ -1,6 +1,5 @@
 import './generated/tailwind.css'
 import Heading from './components/Heading'
-import SunflowerWrap from './components/SunflowerWrap'
 import EmphasizedText from './components/EmphasizedText'
 
 function App() {
@@ -18,9 +17,6 @@ function App() {
         <p>Come back then to RSVP and receive all wedding details!</p>
       </div>
 
-      <SunflowerWrap className='xl:my-24'>
-        <EmphasizedText className='xl:mt-24 lg:mt-8 md:mt-12 sm:mt-8 mt-6'>#2haveand2hoopes</EmphasizedText>
-      </SunflowerWrap>
     </div>
   );
 }
