@@ -7,8 +7,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        cream: '#fff9f0',
+        cream: '#FFFDE7',
+        steel: '#C8C8C8',
         navy: '#1C2544',
+        gold: '#F5A82C',
+        cabernet: '#651528',
       },
       fontSize: {
         '8xl': '6rem',
