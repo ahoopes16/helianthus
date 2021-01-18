@@ -1,17 +1,20 @@
+import { NavLink } from 'react-router-dom'
 
 function Navigation() {
+    const linkClass = 'py-5'
+
     return (
         <div className='bg-navy text-center text-2xl font-bold'>
-            <ul className='pt-8'>
-                <li className='py-5'>About</li>
-                <li className='py-5'>RSVP</li>
-                <li className='py-5'>FAQ</li>
-                <li className='py-5'>Travel</li>
-                <li className='py-5'>Lodging</li>
-                <li className='py-5'>Points of Interest</li>
-                <li className='py-5'>Engagement Photos</li>
-                <li className='py-5'>Gifts</li>
-            </ul>
+            <div className='flex flex-col pt-8'>
+                <NavLink className={linkClass} to='/about'>About</NavLink>
+                <NavLink className={linkClass} to='/rsvp'>RSVP</NavLink>
+                <NavLink className={linkClass} to='/faq'>FAQ</NavLink>
+                <NavLink className={linkClass} to='/travel'>Travel</NavLink>
+                <NavLink className={linkClass} to='/lodging'>Lodging</NavLink>
+                <NavLink className={linkClass} to='/points-of-interest'>Points of Interest</NavLink>
+                <NavLink className={linkClass} to='/engagement-photos'>Engagement Photos</NavLink>
+                <NavLink className={linkClass} to='/gifts'>Gifts</NavLink>
+            </div>
         </div>
     )
 }
