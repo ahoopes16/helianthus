@@ -13,7 +13,7 @@ function App() {
           <Navigation />
           <ContentCard>
             <Switch>
-              {pages.map(page => <Route exact path={page.path} component={page.component} />)}
+              {pages.map(page => <Route exact key={`route-${page.path.replace('/', '')}`} path={page.path} component={page.component} />)}
               <Redirect to='/about' />
             </Switch>
           </ContentCard>
