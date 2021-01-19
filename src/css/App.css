@@ -25,3 +25,14 @@ html {
 .text-roboto {
   font-family: 'Roboto Condensed', sans-serif;
 }
+
+.overflow {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.overflow::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
