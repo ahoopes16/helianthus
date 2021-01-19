@@ -10,3 +10,6 @@ export const pages = [
     { path: '/engagement-photos', title: 'Engagement Photos', component: EngagementPhotos },
     { path: '/gifts', title: 'Gifts', component: Gifts },
 ]
+
+export const BLANK_TARGET = '_blank'
+export const NEW_TAB = 'noopener noreferrer'
