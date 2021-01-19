@@ -26,8 +26,7 @@ function FAQ() {
                     <h2 className='text-cabernet text-4xl font-bold'>What will the weather be like?</h2>
                     <div className='ml-10'>
                         <p>
-                            The air here is dry, so 90 degrees in Arizona is not the same as 90 degrees in Illinois or Missouri.
-                            90 degrees in Arizona feels more like 75-80 degrees in the Midwest.
+                            The air here is dry, so 90 degrees in Arizona feels more like 75-80 degrees in the Midwest.
                             Expect the weather to be between 85-95 degrees during the ceremony, and 65-80 degrees in the evening.
                             It is recommended you bring a light layer for the evening, as the temperature drops dramatically with the sunset.
                         </p>
