@@ -1,12 +1,13 @@
 import { Fragment } from 'react'
 import { Link } from '../components'
+import { NIKKI_PHONE, WILD_HORSE_RANCH_LINK } from '../constants'
 
 function FAQ() {
     return (
         <Fragment>
             <h1 className='text-center text-cabernet text-parisienne text-6xl'>Frequently Asked Questions</h1>
 
-            <p className='mt-8 text-black text-2xl text-center'>Don't see your question here? Please contact the bride at <Link href='tel:4808654626'>(480) 865-4626</Link>.</p>
+            <p className='mt-8 text-black text-2xl text-center'>Don't see your question here? Please contact the bride at <Link href={NIKKI_PHONE}>(480) 865-4626</Link>.</p>
 
             <div className='text-black text-2xl my-10 px-10'>
                 <div className='mb-8'>
@@ -18,7 +19,7 @@ function FAQ() {
                             Sundresses, skirts, slacks, and short/long-sleeve button-down shirts are appropriate attire.
                             Ties and suit jackets are not required but are permissible.
                         </p>
-                        <p><strong>Please do not wear denim, jeans, or shorts.</strong></p>
+                        <p><strong>Please do not wear denim, jeans, shorts, or kilts.</strong></p>
                     </div>
                 </div>
 
@@ -83,7 +84,7 @@ function FAQ() {
                     <h2 className='text-cabernet text-4xl font-bold'>Is the entire event at one location?</h2>
                     <div className='ml-10'>
                         <p>
-                            Yes, the entire event from beginning to end will be taking place at <Link href='http://www.wldhorse.com/' >Oasis at Wild Horse Ranch in Tucson, Arizona</Link>.
+                            Yes, the entire event from beginning to end will be taking place at <Link href={WILD_HORSE_RANCH_LINK}>Oasis at Wild Horse Ranch in Tucson, Arizona</Link>.
                         </p>
                     </div>
                 </div>
