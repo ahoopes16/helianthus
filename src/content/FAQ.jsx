@@ -19,7 +19,7 @@ function FAQ() {
                             Sundresses, skirts, slacks, and short/long-sleeve button-down shirts are appropriate attire.
                             Ties and suit jackets are not required but are permissible.
                         </p>
-                        <p><strong>Please do not wear denim, jeans, shorts, or kilts.</strong></p>
+                        <p><strong>Please do not wear denim, jeans, shorts, or kilts (Looking at you, Dad).</strong></p>
                     </div>
                 </div>
 
@@ -60,7 +60,7 @@ function FAQ() {
                     <div className='ml-10'>
                         <p className='mb-2'>
                             If your Save the Date indicates that you have a plus one, then you have a plus one!
-                            Also, the website will indicate that you have a plus one when you RSVP.
+                            The website will also indicate that you have a plus one when you RSVP.
                         </p>
                         <p>
                             If you did not a receive a plus one on your Save the Date, then you do not have one.
