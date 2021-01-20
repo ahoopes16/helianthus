@@ -1,5 +1,6 @@
 import { Fragment } from 'react'
 import { Link } from '../components'
+import { WILD_HORSE_RANCH_LINK, WILD_HORSE_RANCH_ADDRESS_LINK } from '../constants'
 
 function About() {
     return (
@@ -12,8 +13,8 @@ function About() {
 
                     <div className='ml-6 text-xl'>
                         <p><strong>Date:&nbsp;</strong>Friday, October 8th, 2021</p>
-                        <p><strong>Location:&nbsp;</strong><Link href='http://www.wldhorse.com/'>Oasis at Wild Horse Ranch</Link></p>
-                        <p><strong>Address:&nbsp;</strong><Link href='https://www.google.com/maps/place/The+Oasis+at+Wild+Horse+Ranch/@32.3305269,-111.1104973,17z/data=!3m1!4b1!4m5!3m4!1s0x86d674d400000001:0x6c507c274f08cc6b!8m2!3d32.3305269!4d-111.1083086'>6801 N Camino Verde, Tucson, AZ 85743</Link></p>
+                        <p><strong>Location:&nbsp;</strong><Link href={WILD_HORSE_RANCH_LINK}>Oasis at Wild Horse Ranch</Link></p>
+                        <p><strong>Address:&nbsp;</strong><Link href={WILD_HORSE_RANCH_ADDRESS_LINK}>6801 N Camino Verde, Tucson, AZ 85743</Link></p>
                         <br />
                         <p><strong>Timeline:</strong></p>
                         <div className='ml-6'>
