@@ -74,7 +74,7 @@ function FAQ() {
                     <div className='ml-10'>
                         <p>
                             You're looking at it!
-                            We sent out our Save the Dates and then created this website in lieu of sending out invitations as well.
+                            We sent out our Save the Dates and then created this website in lieu of sending out separate invitations.
                             This is the invitation. :)
                         </p>
                     </div>
