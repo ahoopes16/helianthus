@@ -1,11 +1,11 @@
 import { Fragment } from 'react'
-import { Link } from '../components'
+import { ContentHeading, Link } from '../components'
 import { CHICAGO_TO_TUCSON_LINK, STL_TO_TUCSON_LINK, PHOENIX_SKY_HARBOR_LINK, TUCSON_INTERNATIONAL_LINK, SKYSCANNER_LINK } from '../constants'
 
 function Travel() {
     return (
         <Fragment>
-            <h1 className='text-center text-cabernet text-parisienne text-6xl'>Travel</h1>
+            <ContentHeading>Travel</ContentHeading>
 
             <div className='text-black text-2xl my-10 px-10'>
                 <div className='mb-6'>

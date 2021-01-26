@@ -1,9 +1,10 @@
 import { Fragment } from 'react'
+import { ContentHeading } from '../components'
 
 function Gifts() {
     return (
         <Fragment>
-            <h1 className='text-center text-cabernet text-parisienne text-6xl'>Gifts</h1>
+            <ContentHeading>Gifts</ContentHeading>
 
             <div className='text-black text-2xl my-10 px-10'>
                 <p className='mb-6'>
