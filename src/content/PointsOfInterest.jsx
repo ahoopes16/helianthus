@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import { ContentHeading, Link } from '../components'
+import { ContentBody, ContentHeading, Link } from '../components'
 import {
     DESERT_MUSEUM_LINK, MOUNT_LEMMON_LINK, EL_CHARROS_LINK,
     DESERT_BOTANICAL_GARDENS_LINK, SUNRISE_TRAIL_LINK, DOWNTOWN_SCOTTSDALE_LINK, DOWNTOWN_GILBERT_LINK,
@@ -11,7 +11,7 @@ function PointsOfInterest() {
         <Fragment>
             <ContentHeading>Points Of Interest</ContentHeading>
 
-            <div className='text-black text-2xl my-10 px-10'>
+            <ContentBody>
                 <p className='mb-20'>
                     Thinking of staying for Columbus Day weekend? Or turning your stay into a vacation? We think that's a great idea!
                     Consider checking out these locations/points of interest.
@@ -54,7 +54,7 @@ function PointsOfInterest() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </ContentBody>
         </Fragment>
     )
 }
