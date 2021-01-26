@@ -7,6 +7,22 @@ import {
 } from '../constants'
 
 function PointsOfInterest() {
+    const Section = ({ children }) => {
+        return <div className='h-auto w-80 mb-8'>{children}</div>
+    }
+
+    const SectionHeader = ({ children }) => {
+        return <div className='text-cabernet text-3xl text-center underline'>{children}</div>
+    }
+
+    const SectionBody = ({ children }) => {
+        return <div className='ml-10'>{children}</div>
+    }
+
+    const ListItem = ({ children }) => {
+        return <li className='py-1'>{children}</li>
+    }
+
     return (
         <Fragment>
             <ContentHeading>Points Of Interest</ContentHeading>
@@ -19,40 +35,43 @@ function PointsOfInterest() {
                 </p>
 
                 <div className='mb-8 flex flex-wrap justify-around'>
-                    <div className='h-auto w-80 mb-8'>
-                        <h2 className='text-cabernet text-3xl text-center underline'>Tucson, AZ</h2>
-                        <div className='ml-10'>
+                    <Section>
+                        <SectionHeader>Tucson, AZ</SectionHeader>
+
+                        <SectionBody>
                             <ul>
-                                <li className='py-1'><Link href={DESERT_MUSEUM_LINK}>AZ-Sonora Desert Museum</Link></li>
-                                <li className='py-1'><Link href={EL_CHARROS_LINK}>El Charro Mexican Café</Link></li>
-                                <li className='py-1'><Link href={MOUNT_LEMMON_LINK}>Windy Point Vista, Mt Lemmon</Link></li>
+                                <ListItem><Link href={DESERT_MUSEUM_LINK}>AZ-Sonora Desert Museum</Link></ListItem>
+                                <ListItem><Link href={EL_CHARROS_LINK}>El Charro Mexican Café</Link></ListItem>
+                                <ListItem><Link href={MOUNT_LEMMON_LINK}>Windy Point Vista, Mt Lemmon</Link></ListItem>
                             </ul>
-                        </div>
-                    </div>
+                        </SectionBody>
+                    </Section>
 
-                    <div className='h-auto w-80 mb-8'>
-                        <h2 className='text-cabernet text-3xl text-center underline'>Phoenix, AZ</h2>
-                        <div className='ml-10'>
-                            <ul className=''>
-                                <li className='py-1'><Link href={DESERT_BOTANICAL_GARDENS_LINK}>Desert Botanical Gardens</Link></li>
-                                <li className='py-1'><Link href={DOWNTOWN_GILBERT_LINK}>Gilbert's Heritage District</Link></li>
-                                <li className='py-1'><Link href={DOWNTOWN_SCOTTSDALE_LINK}>Old Town Scottsdale</Link></li>
-                                <li className='py-1'><Link href={SUNRISE_TRAIL_LINK}>Sunrise Trail</Link></li>
-                            </ul>
-                        </div>
-                    </div>
+                    <Section>
+                        <SectionHeader>Phoenix, AZ</SectionHeader>
 
-                    <div className='h-auto w-80 mb-8'>
-                        <h2 className='text-cabernet text-3xl text-center underline'>Sedona, AZ</h2>
-                        <div className='ml-10'>
-                            <ul className=''>
-                                <li className='py-1'><Link href={BELL_ROCK_LINK}>Bell Rock Loop</Link></li>
-                                <li className='py-1'><Link href={JAVELINA_CANTINA_LINK}>Javelina Cantina Restaurant</Link></li>
-                                <li className='py-1'><Link href={JEEP_TOURS_LINK}>Sedona Jeep Tours</Link></li>
-                                <li className='py-1'><Link href={SLIDE_ROCK_LINK}>Slide Rock State Park</Link></li>
+                        <SectionBody>
+                            <ul>
+                                <ListItem><Link href={DESERT_BOTANICAL_GARDENS_LINK}>Desert Botanical Gardens</Link></ListItem>
+                                <ListItem><Link href={DOWNTOWN_GILBERT_LINK}>Gilbert's Heritage District</Link></ListItem>
+                                <ListItem><Link href={DOWNTOWN_SCOTTSDALE_LINK}>Old Town Scottsdale</Link></ListItem>
+                                <ListItem><Link href={SUNRISE_TRAIL_LINK}>Sunrise Trail</Link></ListItem>
                             </ul>
-                        </div>
-                    </div>
+                        </SectionBody>
+                    </Section>
+
+                    <Section>
+                        <SectionHeader>Sedona, AZ</SectionHeader>
+
+                        <SectionBody>
+                            <ul>
+                                <ListItem><Link href={BELL_ROCK_LINK}>Bell Rock Loop</Link></ListItem>
+                                <ListItem><Link href={JAVELINA_CANTINA_LINK}>Javelina Cantina Restaurant</Link></ListItem>
+                                <ListItem><Link href={JEEP_TOURS_LINK}>Sedona Jeep Tours</Link></ListItem>
+                                <ListItem><Link href={SLIDE_ROCK_LINK}>Slide Rock State Park</Link></ListItem>
+                            </ul>
+                        </SectionBody>
+                    </Section>
                 </div>
             </ContentBody>
         </Fragment>
