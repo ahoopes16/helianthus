@@ -1,11 +1,11 @@
 import { Fragment } from 'react'
-import { Link } from '../components'
+import { ContentHeading, Link } from '../components'
 import { WILD_HORSE_RANCH_LINK, WILD_HORSE_RANCH_ADDRESS_LINK } from '../constants'
 
 function About() {
     return (
         <Fragment>
-            <h1 className='text-center text-cabernet text-parisienne text-6xl'>About</h1>
+            <ContentHeading>About</ContentHeading>
 
             <div className='flex justify-around flex-wrap my-4'>
                 <div className='text-black h-auto w-112 bg-white box-shadow p-5 mt-10'>
