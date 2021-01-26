@@ -12,6 +12,9 @@ export const pages = [
     { path: '/gifts', title: 'Gifts', component: Gifts },
 ]
 
+// Screen Sizes
+export const TABLET_WIDTH = 900
+
 // Link Properties
 export const BLANK_TARGET = '_blank'
 export const NEW_TAB = 'noopener noreferrer'
