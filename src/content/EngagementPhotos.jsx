@@ -1,11 +1,11 @@
 import { Fragment } from 'react'
-import { Link } from '../components'
+import { ContentHeading, Link } from '../components'
 import { ENGAGEMENT_PHOTOS_LINK, MPIX_LINK, SARAH_LINK } from '../constants'
 
 function EngagementPhotos() {
     return (
         <Fragment>
-            <h1 className='text-center text-cabernet text-parisienne text-6xl'>Engagement Photos</h1>
+            <ContentHeading>Engagement Photos</ContentHeading>
 
             <div className='text-black text-2xl my-10 px-10'>
                 <p className='mb-6'>

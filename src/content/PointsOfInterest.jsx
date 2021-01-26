@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import { Link } from '../components'
+import { ContentHeading, Link } from '../components'
 import {
     DESERT_MUSEUM_LINK, MOUNT_LEMMON_LINK, EL_CHARROS_LINK,
     DESERT_BOTANICAL_GARDENS_LINK, SUNRISE_TRAIL_LINK, DOWNTOWN_SCOTTSDALE_LINK, DOWNTOWN_GILBERT_LINK,
@@ -9,7 +9,7 @@ import {
 function PointsOfInterest() {
     return (
         <Fragment>
-            <h1 className='text-center text-cabernet text-parisienne text-6xl'>Points Of Interest</h1>
+            <ContentHeading>Points Of Interest</ContentHeading>
 
             <div className='text-black text-2xl my-10 px-10'>
                 <p className='mb-20'>

@@ -1,9 +1,9 @@
 import { Fragment } from 'react'
-
+import { ContentHeading } from '../components'
 function RSVP() {
     return (
         <Fragment>
-            <h1 className='text-center text-cabernet text-parisienne text-6xl'>R.S.V.P.</h1>
+            <ContentHeading>R.S.V.P.</ContentHeading>
 
             <div className='text-black text-2xl text-center mt-20 px-5'>
                 <h2 className='text-4xl text-cabernet mb-8'>This feature will be coming in a future version of the site!</h2>

@@ -1,11 +1,11 @@
 import { Fragment } from 'react'
-import { Link } from '../components'
+import { ContentHeading, Link } from '../components'
 import { NIKKI_PHONE, WILD_HORSE_RANCH_LINK } from '../constants'
 
 function FAQ() {
     return (
         <Fragment>
-            <h1 className='text-center text-cabernet text-parisienne text-6xl'>Frequently Asked Questions</h1>
+            <ContentHeading>Frequently Asked Questions</ContentHeading>
 
             <p className='mt-8 text-black text-2xl text-center'>Don't see your question here? Please contact the bride at <Link href={NIKKI_PHONE}>(480) 865-4626</Link>.</p>
 
