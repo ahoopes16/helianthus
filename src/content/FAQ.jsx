@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import { ContentHeading, Link } from '../components'
+import { ContentBody, ContentHeading, Link } from '../components'
 import { NIKKI_PHONE, WILD_HORSE_RANCH_LINK } from '../constants'
 
 function FAQ() {
@@ -7,9 +7,9 @@ function FAQ() {
         <Fragment>
             <ContentHeading>Frequently Asked Questions</ContentHeading>
 
-            <p className='mt-8 text-black text-2xl text-center'>Don't see your question here? Please contact the bride at <Link href={NIKKI_PHONE}>(480) 865-4626</Link>.</p>
+            <ContentBody>
+                <p className='mb-8 text-center'>Don't see your question here? Please contact the bride at <Link href={NIKKI_PHONE}>(480) 865-4626</Link>.</p>
 
-            <div className='text-black text-2xl my-10 px-10'>
                 <div className='mb-8'>
                     <h2 className='text-cabernet text-4xl font-bold'>What should I wear?</h2>
                     <div className='ml-10'>
@@ -162,7 +162,7 @@ function FAQ() {
                         </p>
                     </div>
                 </div>
-            </div>
+            </ContentBody>
         </Fragment>
     )
 }
