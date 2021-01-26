@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import { ContentHeading, Link } from '../components'
+import { ContentBody, ContentHeading, Link } from '../components'
 import { ENGAGEMENT_PHOTOS_LINK, MPIX_LINK, SARAH_LINK } from '../constants'
 
 function EngagementPhotos() {
@@ -7,7 +7,7 @@ function EngagementPhotos() {
         <Fragment>
             <ContentHeading>Engagement Photos</ContentHeading>
 
-            <div className='text-black text-2xl my-10 px-10'>
+            <ContentBody>
                 <p className='mb-6'>
                     You can find our engagement photos <Link href={ENGAGEMENT_PHOTOS_LINK}>here on IMGBB</Link>!
                     Please feel free to save any of them that you want.
@@ -23,7 +23,7 @@ function EngagementPhotos() {
                     She's a very close friend of ours, incredibly talented, and an absolute pleasure to work with. You won't regret it!
                 </p>
 
-            </div>
+            </ContentBody>
         </Fragment>
     )
 }

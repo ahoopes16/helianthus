@@ -1,12 +1,12 @@
 import { Fragment } from 'react'
-import { ContentHeading } from '../components'
+import { ContentBody, ContentHeading } from '../components'
 
 function Gifts() {
     return (
         <Fragment>
             <ContentHeading>Gifts</ContentHeading>
 
-            <div className='text-black text-2xl my-10 px-10'>
+            <ContentBody>
                 <p className='mb-6'>
                     You coming to our wedding is a <strong>huge</strong> gift!
                     We know that this is a far journey/destination wedding, and your attendance is more than enough.
@@ -27,8 +27,7 @@ function Gifts() {
                     <li>Jimmy Johns</li>
                     <li>Starbucks</li>
                 </ul>
-
-            </div>
+            </ContentBody>
         </Fragment>
     )
 }

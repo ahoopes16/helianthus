@@ -1,13 +1,17 @@
 import { Fragment } from 'react'
-import { ContentHeading, Link } from '../components'
-import { CHICAGO_TO_TUCSON_LINK, STL_TO_TUCSON_LINK, PHOENIX_SKY_HARBOR_LINK, TUCSON_INTERNATIONAL_LINK, SKYSCANNER_LINK } from '../constants'
+import { ContentBody, ContentHeading, Link } from '../components'
+import {
+    CHICAGO_TO_TUCSON_LINK, STL_TO_TUCSON_LINK,
+    PHOENIX_SKY_HARBOR_LINK, TUCSON_INTERNATIONAL_LINK,
+    SKYSCANNER_LINK,
+} from '../constants'
 
 function Travel() {
     return (
         <Fragment>
             <ContentHeading>Travel</ContentHeading>
 
-            <div className='text-black text-2xl my-10 px-10'>
+            <ContentBody>
                 <div className='mb-6'>
                     <h2 className='text-cabernet text-4xl font-bold'>Driving</h2>
 
@@ -64,7 +68,7 @@ function Travel() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </ContentBody>
         </Fragment>
     )
 }

@@ -1,3 +1,4 @@
+import ContentBody from './ContentBody'
 import ContentCard from './ContentCard'
 import ContentWrapper from './ContentWrapper'
 import ContentHeading from './ContentHeading'
@@ -6,6 +7,7 @@ import Navigation from './Navigation'
 import Link from './Link'
 
 export {
+    ContentBody,
     ContentCard,
     ContentWrapper,
     ContentHeading,

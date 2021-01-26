@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import { ContentHeading, Link } from '../components'
+import { ContentBody, ContentHeading, Link } from '../components'
 import {
     HOLIDAY_INN_LINK, HOLIDAY_INN_PHONE,
     COMFORT_INN_LINK, COMFORT_INN_PHONE,
@@ -12,7 +12,7 @@ function Lodging() {
         <Fragment>
             <ContentHeading>Lodging</ContentHeading>
 
-            <div className='text-black text-2xl my-10 px-10'>
+            <ContentBody>
                 <div className='mb-6'>
                     <h2 className='text-cabernet text-4xl font-bold'>Our Hotel Block</h2>
 
@@ -65,7 +65,7 @@ function Lodging() {
                         </p>
                     </div>
                 </div>
-            </div>
+            </ContentBody>
         </Fragment>
     )
 }
