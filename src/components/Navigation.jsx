@@ -8,7 +8,7 @@ function Navigation() {
     const location = useLocation()
 
     return (
-        <div className='bg-navy text-center text-2xl font-bold'>
+        <div className='bg-navy text-center text-2xl font-bold break-words'>
             <div className='flex flex-col pt-8'>
                 {pages.map(page => {
                     const linkContainerClass = `${linkContainerBaseClass} ${location.pathname === page.path ? selectedClass : ''}`
