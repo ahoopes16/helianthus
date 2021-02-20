@@ -1,8 +1,12 @@
 import './generated/tailwind.css'
+import Amplify from 'aws-amplify'
+import awsConfig from './aws-exports'
 import { HashRouter, Route, Switch, Redirect } from 'react-router-dom'
 import swal from 'sweetalert2'
 import { ContentCard, ContentWrapper, Header, Navigation } from './components'
 import { pages, TABLET_WIDTH } from './constants'
+
+Amplify.configure(awsConfig)
 
 function getViewportWidth() {
   // Modern browsers
