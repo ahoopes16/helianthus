@@ -1,0 +1,14 @@
+type Guest @model {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  group: String!
+  plusOneAllowed: Boolean!
+  overTwentyOne: Boolean
+  rsvp: Boolean
+  rsvpDate: AWSDate
+  attendingRehearsalDinner: Boolean
+  plusOneDinner: String
+  plusOneName: String
+  dinnerOption: String
+}
