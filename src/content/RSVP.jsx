@@ -1,7 +1,23 @@
-import { Fragment } from 'react'
+import { Fragment, useEffect } from 'react'
 import { ContentBody, ContentHeading } from '../components'
+import { API, graphqlOperation } from 'aws-amplify'
+import { listGuests } from '../graphql/queries'
 
 function RSVP() {
+    useEffect(() => {
+        const fetchGuests = async () => {
+            try {
+                const guestData = await API.graphql(graphqlOperation(listGuests))
+                const guestList = guestData.data.listGuests.items
+                console.log('Guest List: ', guestList)
+            } catch (error) {
+                console.error(error)
+            }
+        }
+
+        fetchGuests()
+    }, [])
+
     const Header = ({ children }) => {
         return <h2 className='text-4xl text-cabernet mb-8'>{children}</h2>
     }
