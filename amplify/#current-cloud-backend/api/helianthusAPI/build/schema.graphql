@@ -1,0 +1,198 @@
+type Guest {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  group: String!
+  plusOneAllowed: Boolean!
+  overTwentyOne: Boolean
+  rsvp: Boolean
+  rsvpDate: AWSDate
+  attendingRehearsalDinner: Boolean
+  plusOneDinner: String
+  plusOneName: String
+  dinnerOption: String
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelGuestConnection {
+  items: [Guest]
+  nextToken: String
+}
+
+input ModelStringInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelIDInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelIntInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelFloatInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  between: [Float]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelBooleanInput {
+  ne: Boolean
+  eq: Boolean
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelSizeInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+}
+
+input ModelGuestFilterInput {
+  id: ModelIDInput
+  firstName: ModelStringInput
+  lastName: ModelStringInput
+  group: ModelStringInput
+  plusOneAllowed: ModelBooleanInput
+  overTwentyOne: ModelBooleanInput
+  rsvp: ModelBooleanInput
+  rsvpDate: ModelStringInput
+  attendingRehearsalDinner: ModelBooleanInput
+  plusOneDinner: ModelStringInput
+  plusOneName: ModelStringInput
+  dinnerOption: ModelStringInput
+  and: [ModelGuestFilterInput]
+  or: [ModelGuestFilterInput]
+  not: ModelGuestFilterInput
+}
+
+enum ModelAttributeTypes {
+  binary
+  binarySet
+  bool
+  list
+  map
+  number
+  numberSet
+  string
+  stringSet
+  _null
+}
+
+type Query {
+  getGuest(id: ID!): Guest
+  listGuests(filter: ModelGuestFilterInput, limit: Int, nextToken: String): ModelGuestConnection
+}
+
+input CreateGuestInput {
+  id: ID
+  firstName: String!
+  lastName: String!
+  group: String!
+  plusOneAllowed: Boolean!
+  overTwentyOne: Boolean
+  rsvp: Boolean
+  rsvpDate: AWSDate
+  attendingRehearsalDinner: Boolean
+  plusOneDinner: String
+  plusOneName: String
+  dinnerOption: String
+}
+
+input UpdateGuestInput {
+  id: ID!
+  firstName: String
+  lastName: String
+  group: String
+  plusOneAllowed: Boolean
+  overTwentyOne: Boolean
+  rsvp: Boolean
+  rsvpDate: AWSDate
+  attendingRehearsalDinner: Boolean
+  plusOneDinner: String
+  plusOneName: String
+  dinnerOption: String
+}
+
+input DeleteGuestInput {
+  id: ID
+}
+
+type Mutation {
+  createGuest(input: CreateGuestInput!, condition: ModelGuestConditionInput): Guest
+  updateGuest(input: UpdateGuestInput!, condition: ModelGuestConditionInput): Guest
+  deleteGuest(input: DeleteGuestInput!, condition: ModelGuestConditionInput): Guest
+}
+
+input ModelGuestConditionInput {
+  firstName: ModelStringInput
+  lastName: ModelStringInput
+  group: ModelStringInput
+  plusOneAllowed: ModelBooleanInput
+  overTwentyOne: ModelBooleanInput
+  rsvp: ModelBooleanInput
+  rsvpDate: ModelStringInput
+  attendingRehearsalDinner: ModelBooleanInput
+  plusOneDinner: ModelStringInput
+  plusOneName: ModelStringInput
+  dinnerOption: ModelStringInput
+  and: [ModelGuestConditionInput]
+  or: [ModelGuestConditionInput]
+  not: ModelGuestConditionInput
+}
+
+type Subscription {
+  onCreateGuest: Guest @aws_subscribe(mutations: ["createGuest"])
+  onUpdateGuest: Guest @aws_subscribe(mutations: ["updateGuest"])
+  onDeleteGuest: Guest @aws_subscribe(mutations: ["deleteGuest"])
+}
