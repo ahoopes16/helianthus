@@ -1,0 +1,23 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-helianthus-dev-111522-authRole",
+            "UnauthRoleArn": "arn:aws:iam::523173091929:role/amplify-helianthus-dev-111522-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::523173091929:role/amplify-helianthus-dev-111522-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-helianthus-dev-111522-deployment",
+            "UnauthRoleName": "amplify-helianthus-dev-111522-unauthRole",
+            "StackName": "amplify-helianthus-dev-111522",
+            "StackId": "arn:aws:cloudformation:us-east-2:523173091929:stack/amplify-helianthus-dev-111522/9b469940-73a7-11eb-82d6-0a87c1a3dbfa",
+            "AmplifyAppId": "d3qv1cdcqp3yb9"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d3qv1cdcqp3yb9",
+                    "type": "cicd"
+                }
+            }
+        }
+    }
+}
