@@ -1,49 +1,49 @@
 {
-    "providers": {
-        "awscloudformation": {
-            "AuthRoleName": "amplify-helianthus-dev-111522-authRole",
-            "UnauthRoleArn": "arn:aws:iam::523173091929:role/amplify-helianthus-dev-111522-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::523173091929:role/amplify-helianthus-dev-111522-authRole",
-            "Region": "us-east-2",
-            "DeploymentBucketName": "amplify-helianthus-dev-111522-deployment",
-            "UnauthRoleName": "amplify-helianthus-dev-111522-unauthRole",
-            "StackName": "amplify-helianthus-dev-111522",
-            "StackId": "arn:aws:cloudformation:us-east-2:523173091929:stack/amplify-helianthus-dev-111522/9b469940-73a7-11eb-82d6-0a87c1a3dbfa",
-            "AmplifyAppId": "d3qv1cdcqp3yb9"
-        }
-    },
-    "api": {
-        "helianthusAPI": {
-            "service": "AppSync",
-            "providerPlugin": "awscloudformation",
-            "output": {
-                "authConfig": {
-                    "defaultAuthentication": {
-                        "authenticationType": "API_KEY",
-                        "apiKeyConfig": {
-                            "apiKeyExpirationDays": 365,
-                            "description": "api access"
-                        }
-                    },
-                    "additionalAuthenticationProviders": []
-                },
-                "GraphQLAPIIdOutput": "p43zse6sujhdlkuknw2wjhehzy",
-                "GraphQLAPIEndpointOutput": "https://xfkvy3q7bvb45hidqqgcuuytpq.appsync-api.us-east-2.amazonaws.com/graphql",
-                "GraphQLAPIKeyOutput": "da2-x5npnomoifbubnddx54nezk2xm"
-            },
-            "providerMetadata": {
-                "s3TemplateURL": "https://s3.amazonaws.com/amplify-helianthus-dev-111522-deployment/amplify-cfn-templates/api/cloudformation-template.json",
-                "logicalId": "apihelianthusAPI"
-            },
-            "lastPushTimeStamp": "2021-02-20T18:43:56.739Z",
-            "lastPushDirHash": "IXFUN8XZ4Fk9Ij4o+Xp9NkZz8NY="
-        }
-    },
-    "hosting": {
-        "amplifyhosting": {
-            "service": "amplifyhosting",
-            "type": "cicd",
-            "lastPushTimeStamp": "2021-02-20T19:24:37.571Z"
-        }
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-helianthus-dev-111522-authRole",
+      "UnauthRoleArn": "arn:aws:iam::523173091929:role/amplify-helianthus-dev-111522-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::523173091929:role/amplify-helianthus-dev-111522-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-helianthus-dev-111522-deployment",
+      "UnauthRoleName": "amplify-helianthus-dev-111522-unauthRole",
+      "StackName": "amplify-helianthus-dev-111522",
+      "StackId": "arn:aws:cloudformation:us-east-2:523173091929:stack/amplify-helianthus-dev-111522/9b469940-73a7-11eb-82d6-0a87c1a3dbfa",
+      "AmplifyAppId": "d3qv1cdcqp3yb9"
     }
+  },
+  "api": {
+    "helianthusAPI": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 365,
+              "description": "api access"
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "p43zse6sujhdlkuknw2wjhehzy",
+        "GraphQLAPIEndpointOutput": "https://xfkvy3q7bvb45hidqqgcuuytpq.appsync-api.us-east-2.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-x5npnomoifbubnddx54nezk2xm"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-helianthus-dev-111522-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apihelianthusAPI"
+      },
+      "lastPushTimeStamp": "2021-05-09T23:10:36.512Z",
+      "lastPushDirHash": "mExCtSHL/vLUUVgfgCT0q4oybkQ="
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "type": "cicd",
+      "lastPushTimeStamp": "2021-02-20T19:24:37.571Z"
+    }
+  }
 }
