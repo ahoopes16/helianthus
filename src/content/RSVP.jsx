@@ -1,43 +1,46 @@
-import { Fragment, useEffect } from 'react'
+import { Fragment, useState } from 'react'
 import { ContentBody, ContentHeading } from '../components'
 import { API, graphqlOperation } from 'aws-amplify'
-import { listGuests } from '../graphql/queries'
+import { searchGuests } from '../graphql/queries'
 
 function RSVP() {
-    useEffect(() => {
-        const fetchGuests = async () => {
-            try {
-                const guestData = await API.graphql(graphqlOperation(listGuests))
-                const guestList = guestData.data.listGuests.items
-                console.log('Guest List: ', guestList)
-            } catch (error) {
-                console.error(error)
-            }
+    const [firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
+
+    const fetchGuests = async () => {
+        try {
+            const guestData = await API.graphql(graphqlOperation(searchGuests, { filter: { firstName: { eq: firstName }, lastName: { eq: lastName } }}))
+            const guestList = guestData.data.searchGuests.items
+            console.log('Guest List: ', guestList)
+        } catch (error) {
+            console.error('Error while fetching guests', error)
         }
+    }
 
+    const handleSubmit = event => {
+        event.preventDefault()
         fetchGuests()
-    }, [])
-
-    const Header = ({ children }) => {
-        return <h2 className='text-4xl text-cabernet mb-8'>{children}</h2>
     }
 
-    const Paragraph = ({ children }) => {
-        return <p className='mb-4'>{children}</p>
-    }
+    console.log('First Name: ', firstName)
+    console.log('Last Name: ', lastName)
 
     return (
         <Fragment>
             <ContentHeading>R.S.V.P.</ContentHeading>
 
             <ContentBody className='text-center mt-20'>
-                <Header>This feature will be coming in a future version of the site!</Header>
-
-                <Paragraph>
-                    This is by far the most complex part of the website, but I wanted the wedding information to be available as soon as possible.
-                </Paragraph>
-
-                <Paragraph>You will be able to RSVP by the end of April, as promised. :)</Paragraph>
+                <form onSubmit={handleSubmit}>
+                    <label>
+                        First Name:
+                        <input type="text" name="firstName" onChange={event => setFirstName(event.target.value)} />
+                    </label>
+                    <label>
+                        Last Name:
+                        <input type="text" name="lastName" onChange={event => setLastName(event.target.value)} />
+                    </label>
+                    <input type="submit" value="Submit" />
+                </form>
             </ContentBody>
         </Fragment>
     )

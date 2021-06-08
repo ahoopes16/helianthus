@@ -132,6 +132,7 @@ enum ModelAttributeTypes {
 type Query {
   getGuest(id: ID!): Guest
   listGuests(filter: ModelGuestFilterInput, limit: Int, nextToken: String): ModelGuestConnection
+  searchGuests(filter: SearchableGuestFilterInput, sort: SearchableGuestSortInput, limit: Int, nextToken: String, from: Int): SearchableGuestConnection
 }
 
 input CreateGuestInput {
@@ -195,4 +196,112 @@ type Subscription {
   onCreateGuest: Guest @aws_subscribe(mutations: ["createGuest"])
   onUpdateGuest: Guest @aws_subscribe(mutations: ["updateGuest"])
   onDeleteGuest: Guest @aws_subscribe(mutations: ["deleteGuest"])
+}
+
+input SearchableStringFilterInput {
+  ne: String
+  gt: String
+  lt: String
+  gte: String
+  lte: String
+  eq: String
+  match: String
+  matchPhrase: String
+  matchPhrasePrefix: String
+  multiMatch: String
+  exists: Boolean
+  wildcard: String
+  regexp: String
+  range: [String]
+}
+
+input SearchableIntFilterInput {
+  ne: Int
+  gt: Int
+  lt: Int
+  gte: Int
+  lte: Int
+  eq: Int
+  range: [Int]
+}
+
+input SearchableFloatFilterInput {
+  ne: Float
+  gt: Float
+  lt: Float
+  gte: Float
+  lte: Float
+  eq: Float
+  range: [Float]
+}
+
+input SearchableBooleanFilterInput {
+  eq: Boolean
+  ne: Boolean
+}
+
+input SearchableIDFilterInput {
+  ne: ID
+  gt: ID
+  lt: ID
+  gte: ID
+  lte: ID
+  eq: ID
+  match: ID
+  matchPhrase: ID
+  matchPhrasePrefix: ID
+  multiMatch: ID
+  exists: Boolean
+  wildcard: ID
+  regexp: ID
+  range: [ID]
+}
+
+input SearchableGuestFilterInput {
+  id: SearchableIDFilterInput
+  firstName: SearchableStringFilterInput
+  lastName: SearchableStringFilterInput
+  group: SearchableStringFilterInput
+  plusOneAllowed: SearchableBooleanFilterInput
+  overTwentyOne: SearchableBooleanFilterInput
+  rsvp: SearchableBooleanFilterInput
+  rsvpDate: SearchableStringFilterInput
+  attendingRehearsalDinner: SearchableBooleanFilterInput
+  plusOneDinner: SearchableStringFilterInput
+  plusOneName: SearchableStringFilterInput
+  dinnerOption: SearchableStringFilterInput
+  and: [SearchableGuestFilterInput]
+  or: [SearchableGuestFilterInput]
+  not: SearchableGuestFilterInput
+}
+
+enum SearchableSortDirection {
+  asc
+  desc
+}
+
+enum SearchableGuestSortableFields {
+  id
+  firstName
+  lastName
+  group
+  plusOneAllowed
+  overTwentyOne
+  rsvp
+  rsvpDate
+  attendingRehearsalDinner
+  plusOneDinner
+  plusOneName
+  dinnerOption
+}
+
+input SearchableGuestSortInput {
+  field: SearchableGuestSortableFields
+  direction: SearchableSortDirection
+}
+
+type SearchableGuestConnection {
+  items: [Guest]
+  nextToken: String
+  total: Int
 }

@@ -1,4 +1,4 @@
-type Guest @model {
+type Guest @model @searchable {
   id: ID!
   firstName: String!
   lastName: String!

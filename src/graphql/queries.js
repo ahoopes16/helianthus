@@ -48,3 +48,39 @@ export const listGuests = /* GraphQL */ `
     }
   }
 `;
+export const searchGuests = /* GraphQL */ `
+  query SearchGuests(
+    $filter: SearchableGuestFilterInput
+    $sort: SearchableGuestSortInput
+    $limit: Int
+    $nextToken: String
+    $from: Int
+  ) {
+    searchGuests(
+      filter: $filter
+      sort: $sort
+      limit: $limit
+      nextToken: $nextToken
+      from: $from
+    ) {
+      items {
+        id
+        firstName
+        lastName
+        group
+        plusOneAllowed
+        overTwentyOne
+        rsvp
+        rsvpDate
+        attendingRehearsalDinner
+        plusOneDinner
+        plusOneName
+        dinnerOption
+        createdAt
+        updatedAt
+      }
+      nextToken
+      total
+    }
+  }
+`;
