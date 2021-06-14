@@ -1,0 +1,8 @@
+{
+    "CreateAPIKey": 1,
+    "AppSyncApiName": "helianthusAPI",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "S3DeploymentBucket": "amplify-helianthus-dev-111522-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/6d0983708ced4841aac1ec88583ffbd16e856643"
+}

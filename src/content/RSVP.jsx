@@ -1,27 +1,20 @@
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
 import { ContentBody, ContentHeading } from '../components'
+import { GuestSearch, RSVPForm } from '../components'
 
 function RSVP() {
-    const Header = ({ children }) => {
-        return <h2 className='text-4xl text-cabernet mb-8'>{children}</h2>
-    }
-
-    const Paragraph = ({ children }) => {
-        return <p className='mb-4'>{children}</p>
-    }
+    const [guest, setGuest] = useState(null)
 
     return (
         <Fragment>
             <ContentHeading>R.S.V.P.</ContentHeading>
 
             <ContentBody className='text-center mt-20'>
-                <Header>This feature will be coming in a future version of the site!</Header>
-
-                <Paragraph>
-                    This is by far the most complex part of the website, but I wanted the wedding information to be available as soon as possible.
-                </Paragraph>
-
-                <Paragraph>You will be able to RSVP by the end of April, as promised. :)</Paragraph>
+                <GuestSearch setGuest={setGuest} />
+                {guest && <Fragment>
+                    <hr className="my-5" />
+                    <RSVPForm guest={guest} />
+                </Fragment>}
             </ContentBody>
         </Fragment>
     )

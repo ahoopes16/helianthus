@@ -1,0 +1,14 @@
+type Guest @model @searchable {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  group: String!
+  plusOneAllowed: Boolean!
+  overTwentyOne: Boolean
+  rsvp: String
+  rsvpDate: AWSDate
+  attendingRehearsalDinner: Boolean
+  plusOneDinner: String
+  plusOneName: String
+  dinnerOption: String
+}
