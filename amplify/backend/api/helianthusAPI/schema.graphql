@@ -5,7 +5,7 @@ type Guest @model @searchable {
   group: String!
   plusOneAllowed: Boolean!
   overTwentyOne: Boolean
-  rsvp: Boolean
+  rsvp: String
   rsvpDate: AWSDate
   attendingRehearsalDinner: Boolean
   plusOneDinner: String

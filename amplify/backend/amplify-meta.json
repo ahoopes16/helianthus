@@ -35,8 +35,8 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-helianthus-dev-111522-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apihelianthusAPI"
       },
-      "lastPushTimeStamp": "2021-05-09T23:10:36.512Z",
-      "lastPushDirHash": "mExCtSHL/vLUUVgfgCT0q4oybkQ="
+      "lastPushTimeStamp": "2021-06-14T04:29:20.149Z",
+      "lastPushDirHash": "lYAeCo13lpgJkftZwKXTCInw8YY="
     }
   },
   "hosting": {

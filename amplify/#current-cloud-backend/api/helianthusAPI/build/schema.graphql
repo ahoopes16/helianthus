@@ -5,7 +5,7 @@ type Guest {
   group: String!
   plusOneAllowed: Boolean!
   overTwentyOne: Boolean
-  rsvp: Boolean
+  rsvp: String
   rsvpDate: AWSDate
   attendingRehearsalDinner: Boolean
   plusOneDinner: String
@@ -105,7 +105,7 @@ input ModelGuestFilterInput {
   group: ModelStringInput
   plusOneAllowed: ModelBooleanInput
   overTwentyOne: ModelBooleanInput
-  rsvp: ModelBooleanInput
+  rsvp: ModelStringInput
   rsvpDate: ModelStringInput
   attendingRehearsalDinner: ModelBooleanInput
   plusOneDinner: ModelStringInput
@@ -142,7 +142,7 @@ input CreateGuestInput {
   group: String!
   plusOneAllowed: Boolean!
   overTwentyOne: Boolean
-  rsvp: Boolean
+  rsvp: String
   rsvpDate: AWSDate
   attendingRehearsalDinner: Boolean
   plusOneDinner: String
@@ -157,7 +157,7 @@ input UpdateGuestInput {
   group: String
   plusOneAllowed: Boolean
   overTwentyOne: Boolean
-  rsvp: Boolean
+  rsvp: String
   rsvpDate: AWSDate
   attendingRehearsalDinner: Boolean
   plusOneDinner: String
@@ -181,7 +181,7 @@ input ModelGuestConditionInput {
   group: ModelStringInput
   plusOneAllowed: ModelBooleanInput
   overTwentyOne: ModelBooleanInput
-  rsvp: ModelBooleanInput
+  rsvp: ModelStringInput
   rsvpDate: ModelStringInput
   attendingRehearsalDinner: ModelBooleanInput
   plusOneDinner: ModelStringInput
@@ -264,7 +264,7 @@ input SearchableGuestFilterInput {
   group: SearchableStringFilterInput
   plusOneAllowed: SearchableBooleanFilterInput
   overTwentyOne: SearchableBooleanFilterInput
-  rsvp: SearchableBooleanFilterInput
+  rsvp: SearchableStringFilterInput
   rsvpDate: SearchableStringFilterInput
   attendingRehearsalDinner: SearchableBooleanFilterInput
   plusOneDinner: SearchableStringFilterInput
