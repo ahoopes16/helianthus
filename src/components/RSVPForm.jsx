@@ -3,8 +3,15 @@ import Checkbox from './Checkbox'
 import { FoodOptions, YesNoOptions } from './select-options'
 import SelectBox from './SelectBox'
 import TextBox from './TextBox'
+import { API, graphqlOperation } from 'aws-amplify'
+import { updateGuest } from '../graphql/mutations'
+import swal from 'sweetalert2'
 
 function RSVPForm({ guest }) {
+    if (guest.rsvp.toLowerCase() === 'false' || guest.rsvp.toLowerCase() === 'true') {
+        guest.rsvp = ''
+    }
+
     /** Guest form information */
     const [id, setId] = useState(guest.id)
     const [attendingRehearsalDinner, setAttendingRehearsalDinner] = useState(guest.attendingRehearsalDinner)
@@ -31,36 +38,82 @@ function RSVPForm({ guest }) {
     }
 
     const toggleRSVP = event => {
-        setRsvp(event.target.value)
+        const newRsvp = event.target.value
+        setRsvp(newRsvp)
 
-        if (rsvp === 'Yes') {
-            setRsvpDate(new Date().toISOString())
+        if (newRsvp === 'Yes') {
+            setRsvpDate(new Date().toISOString().split('T')[0])
         } else {
-            setRsvpDate('')
+            setRsvpDate(new Date('2000-01-01').toISOString().split('T')[0])
+        }
+    }
+
+    const isSubmitDisabled = () => {
+        return !rsvp || !dinnerOption
+    }
+
+    const handleSubmit = async (event) => {
+        event.preventDefault()
+        try {
+            const input = {
+                id,
+                firstName: guest.firstName,
+                lastName: guest.lastName,
+                group: guest.group,
+                attendingRehearsalDinner,
+                dinnerOption,
+                overTwentyOne,
+                rsvp,
+                rsvpDate,
+                plusOneAllowed,
+                plusOneDinner,
+                plusOneName,
+            }
+
+            await API.graphql(graphqlOperation(updateGuest, { input }))
+
+            swal.fire({
+                title: 'Success!',
+                text: 'If you have other family members that have been invited, please feel free to submit their RSVP as well. Thank you!',
+                icon: 'success',
+            })
+        } catch (error) {
+            swal.fire({
+                title: 'Oops!',
+                text: 'Sorry, it looks like something went wrong while saving your data. If this keeps happening, please text the bride.',
+                icon: 'error',
+            })
         }
     }
 
     return (
-        <form className="flex flex-col items-start justify-around mt-10" id="rsvp-form">
-            <SelectBox className="p-5" label="RSVP" value={rsvp} onChange={toggleRSVP}>
-                <YesNoOptions />
-            </SelectBox>
+        <form className="mt-10" id="rsvp-form">
+            <div className="flex flex-col items-start">
+                <SelectBox className="p-5" label="RSVP" value={rsvp} onChange={toggleRSVP}>
+                    <YesNoOptions />
+                </SelectBox>
 
-            <Checkbox className="p-5" label="Attending Rehearsal Dinner (Check if yes)" value={attendingRehearsalDinner} onChange={() => setAttendingRehearsalDinner(!attendingRehearsalDinner)} />
+                <Checkbox className="p-5" label="Attending Rehearsal Dinner (Check if yes)" value={attendingRehearsalDinner} onChange={() => setAttendingRehearsalDinner(!attendingRehearsalDinner)} />
 
-            <Checkbox className="p-5" label="Over Twenty-One Years Old (Check if yes)" value={overTwentyOne} onChange={() => setOverTwentyOne(!overTwentyOne)} />
+                <Checkbox className="p-5" label="Over Twenty-One Years Old (Check if yes)" value={overTwentyOne} onChange={() => setOverTwentyOne(!overTwentyOne)} />
 
-            <SelectBox className="p-5" label="Dinner" value={dinnerOption} onChange={event => setDinnerOption(event.target.value)}>
-                <FoodOptions />
-            </SelectBox>
-
-            {plusOneAllowed && <Fragment>
-                <TextBox className="p-5" label="Plus One Name" value={plusOneName} onChange={event => setPlusOneName(event.target.value)} />
-
-                <SelectBox className="p-5" label="Plus One Dinner" value={plusOneDinner} onChange={event => setPlusOneDinner(event.target.value)}>
+                <SelectBox className="p-5" label="Dinner" value={dinnerOption} onChange={event => setDinnerOption(event.target.value)}>
                     <FoodOptions />
                 </SelectBox>
-            </Fragment>}
+
+                {plusOneAllowed && <Fragment>
+                    <TextBox className="p-5" label="Plus One Name (Leave blank if coming alone)" value={plusOneName} onChange={event => setPlusOneName(event.target.value)} />
+
+                    <SelectBox className="p-5" label="Plus One Dinner (Leave blank if coming alone)" value={plusOneDinner} onChange={event => setPlusOneDinner(event.target.value)}>
+                        <FoodOptions />
+                    </SelectBox>
+                </Fragment>}
+
+            </div>
+
+            <button className="rounded m-5" disabled={isSubmitDisabled()} type="submit" onClick={handleSubmit}>
+                Submit
+            </button>
         </form>
     )
 }
