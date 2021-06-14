@@ -11,7 +11,10 @@ function RSVP() {
 
             <ContentBody className='text-center mt-20'>
                 <GuestSearch setGuest={setGuest} />
-                {guest && <RSVPForm guest={guest} />}
+                {guest && <Fragment>
+                    <hr className="my-5" />
+                    <RSVPForm guest={guest} />
+                </Fragment>}
             </ContentBody>
         </Fragment>
     )
