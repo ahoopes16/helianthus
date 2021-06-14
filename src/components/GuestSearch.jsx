@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import TextBox from './TextBox'
 import { API, graphqlOperation } from 'aws-amplify'
 import { searchGuests } from '../graphql/queries'
 
@@ -26,17 +27,19 @@ function GuestSearch({ setGuest }) {
         fetchGuests()
     }
 
+    const isDisabled = () => {
+        return !firstName || !lastName
+    }
+
     return (
-        <form onSubmit={handleSubmit}>
-            <label>
-                First Name:
-                <input type="text" name="firstName" onChange={event => setFirstName(event.target.value)} />
-            </label>
-            <label>
-                Last Name:
-                <input type="text" name="lastName" onChange={event => setLastName(event.target.value)} />
-            </label>
-            <input type="submit" value="Submit" />
+        <form>
+            <div className="flex flex-wrap justify-around mb-4">
+                <TextBox className='p-2' label="First Name" value={firstName} onChange={event => setFirstName(event.target.value)} />
+                <TextBox className='p-2' label="Last Name" value={lastName} onChange={event => setLastName(event.target.value)} />
+            </div>
+            <button className="rounded" disabled={isDisabled()} type="submit" onClick={handleSubmit}>
+                Submit
+            </button>
         </form>
     )
 }

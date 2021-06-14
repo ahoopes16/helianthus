@@ -1,4 +1,8 @@
-import { useState } from 'react'
+import { Fragment, useState } from 'react'
+import Checkbox from './Checkbox'
+import { FoodOptions, YesNoOptions } from './select-options'
+import SelectBox from './SelectBox'
+import TextBox from './TextBox'
 
 function RSVPForm({ guest }) {
     /** Guest form information */
@@ -15,7 +19,6 @@ function RSVPForm({ guest }) {
     const [plusOneName, setPlusOneName] = useState(guest.plusOneName)
 
     if (guest.id !== id) {
-        console.log('Updating guest!')
         setId(guest.id)
         setAttendingRehearsalDinner(guest.attendingRehearsalDinner)
         setDinnerOption(guest.dinnerOption)
@@ -27,32 +30,37 @@ function RSVPForm({ guest }) {
         setPlusOneName(guest.plusOneName)
     }
 
+    const toggleRSVP = event => {
+        setRsvp(event.target.value)
+
+        if (rsvp === 'Yes') {
+            setRsvpDate(new Date().toISOString())
+        } else {
+            setRsvpDate('')
+        }
+    }
+
     return (
-        <form className="flex flex-column" id="rsvp-form">
-            <label>
-                RSVP:
-                <input type="checkbox" name="rsvp" value={rsvp} onChange={() => setRsvp(!rsvp)} />
-            </label>
-            <label>
-                Attending Rehearsal Dinner:
-                <input type="checkbox" name="attendingRehearsalDinner" value={attendingRehearsalDinner} onChange={() => setAttendingRehearsalDinner(!attendingRehearsalDinner)} />
-            </label>
-            <label>
-                Over Twenty One:
-                <input type="checkbox" name="overTwentyOne" value={overTwentyOne} onChange={() => setOverTwentyOne(!overTwentyOne)} />
-            </label>
-            <label>
-                Dinner:
-                <input type="text" name="dinnerOption" value={dinnerOption} onChange={event => setDinnerOption(event.target.value)} />
-            </label>
-            {plusOneAllowed && <label>
-                Plus One Name:
-                <input type="text" name="plusOneName" value={plusOneName} onChange={event => setPlusOneName(event.target.value)} />
-            </label>}
-            {plusOneAllowed && <label>
-                Plus One Dinner:
-                <input type="text" name="plusOneDinner" value={plusOneDinner} onChange={event => setPlusOneDinner(event.target.value)} />
-            </label>}
+        <form className="flex flex-col items-start justify-around mt-10" id="rsvp-form">
+            <SelectBox className="p-5" label="RSVP" value={rsvp} onChange={toggleRSVP}>
+                <YesNoOptions />
+            </SelectBox>
+
+            <Checkbox className="p-5" label="Attending Rehearsal Dinner (Check if yes)" value={attendingRehearsalDinner} onChange={() => setAttendingRehearsalDinner(!attendingRehearsalDinner)} />
+
+            <Checkbox className="p-5" label="Over Twenty-One Years Old (Check if yes)" value={overTwentyOne} onChange={() => setOverTwentyOne(!overTwentyOne)} />
+
+            <SelectBox className="p-5" label="Dinner" value={dinnerOption} onChange={event => setDinnerOption(event.target.value)}>
+                <FoodOptions />
+            </SelectBox>
+
+            {plusOneAllowed && <Fragment>
+                <TextBox className="p-5" label="Plus One Name" value={plusOneName} onChange={event => setPlusOneName(event.target.value)} />
+
+                <SelectBox className="p-5" label="Plus One Dinner" value={plusOneDinner} onChange={event => setPlusOneDinner(event.target.value)}>
+                    <FoodOptions />
+                </SelectBox>
+            </Fragment>}
         </form>
     )
 }

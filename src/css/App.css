@@ -2,8 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-cream: #FFFDE7;
+  --color-steel: #C8C8C8;
+  --color-navy: #1C2544;
+  --color-navy-disabled: #5167B8;
+  --color-gold: #F5A82C;
+  --color-cabernet: #651528;
+}
+
 html {
-  background-color: #C8C8C8;
+  background-color: var(--color-steel);
 }
 
 #app {
@@ -35,4 +44,25 @@ html {
 .overflow::-webkit-scrollbar {
   width: 0;
   height: 0;
+}
+
+button {
+  background-color: var(--color-navy);
+  color: var(--color-gold);
+  padding: 0 1.15rem;
+}
+
+button:hover:not(:disabled) {
+  border: 1px solid var(--color-gold);
+}
+
+button:disabled {
+  background-color: var(--color-steel);
+  color: var(--color-navy);
+  cursor: not-allowed;
+}
+
+input[type='checkbox'] {
+  height: 1.2rem;
+  width: 1.2rem;
 }
