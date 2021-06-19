@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import TextBox from './TextBox'
 import { API, graphqlOperation } from 'aws-amplify'
-import swal from 'sweetalert2'
+import { generateErrorModal } from '../helpers'
 import { searchGuests, getGuest } from '../graphql/queries'
+import TextBox from './TextBox'
 
 function GuestSearch({ setGuest }) {
     const [firstName, setFirstName] = useState('')
@@ -10,7 +10,6 @@ function GuestSearch({ setGuest }) {
 
     const fetchGuests = async () => {
         try {
-            console.log('getting the first one')
             const guestData = await API.graphql(graphqlOperation(searchGuests, { filter: { firstName: { eq: firstName }, lastName: { eq: lastName } } }))
             const guestList = guestData.data.searchGuests.items
             if (guestList.length) {
@@ -20,12 +19,7 @@ function GuestSearch({ setGuest }) {
                 throw new Error(`There was no guest found with the name "${firstName} ${lastName}". Please check your name for any typos and try nicknames/full names. If you keep having problems, please text the bride.`)
             }
         } catch (error) {
-            swal.fire({
-                title: 'Oops!',
-                text: error.message,
-                icon: 'error',
-                confirmButtonText: 'Okay!'
-            })
+            generateErrorModal(error.message)
         }
     }
 

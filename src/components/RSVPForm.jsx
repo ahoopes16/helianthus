@@ -1,11 +1,11 @@
+import { API, graphqlOperation } from 'aws-amplify'
+import { updateGuest } from '../graphql/mutations'
+import { generateErrorModal, generateSuccessModal } from '../helpers'
 import { Fragment, useState } from 'react'
 import Checkbox from './Checkbox'
 import { FoodOptions, YesNoOptions } from './select-options'
 import SelectBox from './SelectBox'
 import TextBox from './TextBox'
-import { API, graphqlOperation } from 'aws-amplify'
-import { updateGuest } from '../graphql/mutations'
-import swal from 'sweetalert2'
 
 function RSVPForm({ guest }) {
     if (guest.rsvp.toLowerCase() === 'false' || guest.rsvp.toLowerCase() === 'true') {
@@ -71,18 +71,9 @@ function RSVPForm({ guest }) {
             }
 
             await API.graphql(graphqlOperation(updateGuest, { input }))
-
-            swal.fire({
-                title: 'Success!',
-                text: 'If you have other family members that have been invited, please feel free to submit their RSVP as well. Thank you!',
-                icon: 'success',
-            })
+            generateSuccessModal('If you have other family members that have been invited, please feel free to submit their RSVP as well. Thank you!')
         } catch (error) {
-            swal.fire({
-                title: 'Oops!',
-                text: 'Sorry, it looks like something went wrong while saving your data. If this keeps happening, please text the bride.',
-                icon: 'error',
-            })
+            generateErrorModal('Sorry, it looks like something went wrong while saving your data. If this keeps happening, please text the bride.')
         }
     }
 
