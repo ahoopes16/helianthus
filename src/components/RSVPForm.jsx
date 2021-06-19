@@ -67,7 +67,7 @@ function RSVPForm({ guest }) {
                 rsvpDate,
                 plusOneAllowed,
                 plusOneDinner,
-                plusOneName,
+                plusOneName: plusOneName.trim(),
             }
 
             await API.graphql(graphqlOperation(updateGuest, { input }))
