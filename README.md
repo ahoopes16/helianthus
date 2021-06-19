@@ -117,14 +117,14 @@ Author: [Alex Hoopes](https://github.com/ahoopes16)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/ShowMeTheRoapes/clotho.svg?style=for-the-badge
-[contributors-url]: https://github.com/ShowMeTheRoapes/clotho/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/ShowMeTheRoapes/clotho.svg?style=for-the-badge
-[forks-url]: https://github.com/ShowMeTheRoapes/clotho/network/members
-[stars-shield]: https://img.shields.io/github/stars/ShowMeTheRoapes/clotho.svg?style=for-the-badge
-[stars-url]: https://github.com/ShowMeTheRoapes/clotho/stargazers
-[issues-shield]: https://img.shields.io/github/issues/ShowMeTheRoapes/clotho.svg?style=for-the-badge
-[issues-url]: https://github.com/ShowMeTheRoapes/clotho/issues
-[license-shield]: https://img.shields.io/github/license/ShowMeTheRoapes/clotho.svg?style=for-the-badge
-[license-url]: https://github.com/ShowMeTheRoapes/clotho/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/ahoopes16/helianthus.svg?style=for-the-badge
+[contributors-url]: https://github.com/ahoopes16/helianthus/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ahoopes16/helianthus.svg?style=for-the-badge
+[forks-url]: https://github.com/ahoopes16/helianthus/network/members
+[stars-shield]: https://img.shields.io/github/stars/ahoopes16/helianthus.svg?style=for-the-badge
+[stars-url]: https://github.com/ahoopes16/helianthus/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ahoopes16/helianthus.svg?style=for-the-badge
+[issues-url]: https://github.com/ahoopes16/helianthus/issues
+[license-shield]: https://img.shields.io/github/license/ahoopes16/helianthus.svg?style=for-the-badge
+[license-url]: https://github.com/ahoopes16/helianthus/blob/master/LICENSE.txt
 [product-screenshot]: images/screenshot.png
