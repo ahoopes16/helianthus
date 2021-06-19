@@ -44,7 +44,7 @@ function GuestSearch({ setGuest }) {
                 <TextBox className='p-2' label="First Name" value={firstName} onChange={event => setFirstName(event.target.value)} />
                 <TextBox className='p-2' label="Last Name" value={lastName} onChange={event => setLastName(event.target.value)} />
             </div>
-            <button className="rounded" disabled={isDisabled()} type="submit" onClick={handleSubmit}>
+            <button className="generic-button rounded" disabled={isDisabled()} type="submit" onClick={handleSubmit}>
                 Search
             </button>
         </form>

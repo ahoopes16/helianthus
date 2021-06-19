@@ -111,7 +111,7 @@ function RSVPForm({ guest }) {
 
             </div>
 
-            <button className="rounded m-5" disabled={isSubmitDisabled()} type="submit" onClick={handleSubmit}>
+            <button className="generic-button rounded m-5" disabled={isSubmitDisabled()} type="submit" onClick={handleSubmit}>
                 Submit
             </button>
         </form>
