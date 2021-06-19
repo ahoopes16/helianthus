@@ -10,7 +10,7 @@ function GuestSearch({ setGuest }) {
 
     const fetchGuests = async () => {
         try {
-            const guestData = await API.graphql(graphqlOperation(searchGuests, { filter: { firstName: { eq: firstName }, lastName: { eq: lastName } } }))
+            const guestData = await API.graphql(graphqlOperation(searchGuests, { filter: { firstName: { eq: firstName.trim() }, lastName: { eq: lastName.trim() } } }))
             const guestList = guestData.data.searchGuests.items
             if (guestList.length) {
                 const data = await API.graphql(graphqlOperation(getGuest, { id: guestList[0].id }))
