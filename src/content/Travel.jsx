@@ -8,31 +8,55 @@ import {
 
 function Travel() {
     const Section = ({ children }) => {
-        return <div className='mb-6'>{children}</div>
+        const className = `
+        mb-6
+        `
+        return <div className={className}>{children}</div>
     }
 
     const SectionHeader = ({ children }) => {
-        return <h2 className='text-cabernet text-4xl font-bold'>{children}</h2>
+        const className = `
+        text-cabernet font-bold
+        text-xl
+        `
+        return <h2 className={className}>{children}</h2>
     }
 
     const SectionBody = ({ children }) => {
-        return <div className='ml-10'>{children}</div>
+        const className = `
+        ml-6
+        `
+        return <div className={className}>{children}</div>
     }
 
     const List = ({ children }) => {
-        return <ul className='ml-16 list-disc'>{children}</ul>
+        const className = `
+        list-disc
+        ml-10
+        `
+        return <ul className={className}>{children}</ul>
     }
 
     const AirportInfoCard = ({ children }) => {
-        return <div className='h-auto w-112'>{children}</div>
+        const className = `
+        h-auto
+        `
+        return <div className={className}>{children}</div>
     }
 
     const AirportName = ({ children }) => {
-        return <h3 className='text-3xl underline text-cabernet'>{children}</h3>
+        const className = `
+        text-cabernet underline
+        text-xl
+        `
+        return <h3 className={className}>{children}</h3>
     }
 
     const AirportInfoWrapper = ({ children }) => {
-        return <div className='mb-6'>{children}</div>
+        const className = `
+        mb-6
+        `
+        return <div className={className}>{children}</div>
     }
 
     return (

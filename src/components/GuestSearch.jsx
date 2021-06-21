@@ -33,11 +33,15 @@ function GuestSearch({ setGuest }) {
         return !firstName || !lastName
     }
 
+    const fieldClass = `
+    p-2 mr-4
+    `
+
     return (
         <form>
             <div className="flex flex-wrap justify-around mb-4">
-                <TextBox className='p-2' label="First Name" value={firstName} onChange={event => setFirstName(event.target.value)} />
-                <TextBox className='p-2' label="Last Name" value={lastName} onChange={event => setLastName(event.target.value)} />
+                <TextBox className={fieldClass} label="First Name" value={firstName} onChange={event => setFirstName(event.target.value)} />
+                <TextBox className={fieldClass} label="Last Name" value={lastName} onChange={event => setLastName(event.target.value)} />
             </div>
             <Button isDisabled={isDisabled} type="submit" onClick={handleSubmit}>
                 Search

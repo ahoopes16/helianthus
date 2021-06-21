@@ -4,19 +4,32 @@ import { NIKKI_PHONE, WILD_HORSE_RANCH_LINK } from '../constants'
 
 function FAQ() {
     const Section = ({ children }) => {
-        return <div className='mb-8'>{children}</div>
+        const className=`
+        mb-8
+        `
+        return <div className={className}>{children}</div>
     }
 
     const Question = ({ children }) => {
-        return <h2 className='text-cabernet text-4xl font-bold'>{children}</h2>
+        const className=`
+        text-cabernet font-bold
+        text-xl
+        `
+        return <h2 className={className}>{children}</h2>
     }
 
     const Answer = ({ children }) => {
-        return <div className='ml-10'>{children}</div>
+        const className=`
+        ml-2
+        `
+        return <div className={className}>{children}</div>
     }
 
     const Paragraph = ({ children }) => {
-        return <p className='mb-2'>{children}</p>
+        const className=`
+        mb-2
+        `
+        return <p className={className}>{children}</p>
     }
 
     return (
@@ -24,7 +37,7 @@ function FAQ() {
             <ContentHeading>Frequently Asked Questions</ContentHeading>
 
             <ContentBody>
-                <p className='mb-8 text-center'>Don't see your question here? Please contact the bride at <Link href={NIKKI_PHONE}>(480) 865-4626</Link>.</p>
+                <p className='mb-4 text-center'>Don't see your question here? Please contact the bride at <Link href={NIKKI_PHONE}>(480) 865-4626</Link>.</p>
 
                 <Section>
                     <Question>What should I wear?</Question>

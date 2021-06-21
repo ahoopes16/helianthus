@@ -1,7 +1,15 @@
 function ContentCard({ children }) {
+    const outerClass = `
+    laptop:flex laptop:m-auto laptop:items-center laptop:justify-center
+    `
+    const innerClass = `
+    bg-cream overflow
+    laptop:shadow-2xl laptop:rounded-lg
+    w-full xl:h-200 xl:w-320
+    `
     return (
-        <div className='col-span-11 flex items-center justify-center'>
-            <div className='h-224 w-320 bg-cream box-shadow overflow'>
+        <div className={outerClass}>
+            <div className={innerClass}>
                 {children}
             </div>
         </div>

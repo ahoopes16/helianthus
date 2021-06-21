@@ -3,6 +3,7 @@ function Button({ children, className='', isDisabled, onClick, ...props }) {
     bg-navy text-gold px-5 rounded
     hover:border hover:border-gold
     disabled:bg-steel disabled:text-navy disabled:cursor-not-allowed
+    text-lg
     ${className}
     `
 

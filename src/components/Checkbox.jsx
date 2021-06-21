@@ -7,8 +7,8 @@ function Checkbox({ label, onChange, value, ...props }) {
         <label {...props} htmlFor={htmlName}>
             {label}:
             <input
-                className="ml-4 h-5 w-5"
-                type="checkbox"
+                className='ml-2'
+                type='checkbox'
                 name={htmlName}
                 checked={value}
                 onChange={onChange}

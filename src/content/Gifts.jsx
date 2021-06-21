@@ -3,7 +3,10 @@ import { ContentBody, ContentHeading } from '../components'
 
 function Gifts() {
     const Section = ({ children }) => {
-        return <p className='mb-6'>{children}</p>
+        const className = `
+        mb-6
+        `
+        return <p className={className}>{children}</p>
     }
 
     return (
@@ -24,7 +27,7 @@ function Gifts() {
                 </Section>
 
                 <p>Gift cards we would love:</p>
-                <ul className='ml-10 list-disc'>
+                <ul className='ml-6 list-disc'>
                     <li>Target</li>
                     <li>Amazon</li>
                     <li>Noodles and Company</li>

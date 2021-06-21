@@ -9,7 +9,7 @@ function RSVP() {
         <Fragment>
             <ContentHeading>R.S.V.P.</ContentHeading>
 
-            <ContentBody className='text-center mt-20'>
+            <ContentBody className='text-center text-sm'>
                 <GuestSearch setGuest={setGuest} />
                 {guest && <Fragment>
                     <hr className="my-5" />
