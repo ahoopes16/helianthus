@@ -9,7 +9,7 @@ function Button({ children, className='', isDisabled, onClick, ...props }) {
     return (
         <button
             className={consolidatedClass}
-            disabled={isDisabled()}
+            disabled={isDisabled ? isDisabled() : false}
             onClick={onClick}
             {...props}
         >
