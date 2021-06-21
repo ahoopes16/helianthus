@@ -1,3 +1,4 @@
+import Button from './Button'
 import Checkbox from './Checkbox'
 import ContentBody from './ContentBody'
 import ContentCard from './ContentCard'
@@ -12,6 +13,7 @@ import SelectBox from './SelectBox'
 import TextBox from './TextBox'
 
 export {
+    Button,
     Checkbox,
     ContentBody,
     ContentCard,

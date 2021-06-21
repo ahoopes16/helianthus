@@ -2,6 +2,7 @@ import { API, graphqlOperation } from 'aws-amplify'
 import { updateGuest } from '../graphql/mutations'
 import { generateErrorModal, generateSuccessModal } from '../helpers'
 import { Fragment, useState } from 'react'
+import Button from './Button'
 import Checkbox from './Checkbox'
 import { FoodOptions, YesNoOptions } from './select-options'
 import SelectBox from './SelectBox'
@@ -102,9 +103,9 @@ function RSVPForm({ guest }) {
 
             </div>
 
-            <button className="generic-button rounded m-5" disabled={isSubmitDisabled()} type="submit" onClick={handleSubmit}>
+            <Button className="m-5" disabled={isSubmitDisabled()} type="submit" onClick={handleSubmit}>
                 Submit
-            </button>
+            </Button>
         </form>
     )
 }
