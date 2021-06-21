@@ -17,14 +17,14 @@ function Travel() {
     const SectionHeader = ({ children }) => {
         const className = `
         text-cabernet font-bold
-        text-xl mobile-lg:text-2xl
+        text-xl mobile-lg:text-2xl laptop:text-3xl
         `
         return <h2 className={className}>{children}</h2>
     }
 
     const SectionBody = ({ children }) => {
         const className = `
-        ml-6
+        ml-6 laptop:ml-8
         `
         return <div className={className}>{children}</div>
     }

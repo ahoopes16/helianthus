@@ -15,7 +15,7 @@ function About() {
     const CardHeader = ({ children }) => {
         const className = `
             text-cabernet text-center font-bold underline
-            text-lg mobile-lg:text-xl
+            text-lg mobile-lg:text-xl laptop:text-2xl
         `
         return <h2 className={className}>{children}</h2>
     }
@@ -23,7 +23,7 @@ function About() {
     const CardBody = ({ children }) => {
         const className=`
         ml-4
-        mobile-lg:text-lg
+        mobile-lg:text-lg laptop:text-xl
         `
         return <div className={className}>{children}</div>
     }

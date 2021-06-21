@@ -9,11 +9,11 @@ function Header({ showNavbar, toggleNavbar }) {
 
     const logoContainerClass = `
     flex justify-center items-center
-    h-16 w-20 mobile-lg:h-20 mobile-lg:w-24
+    h-16 w-20 mobile-lg:h-20 mobile-lg:w-24 laptop:w-40
     `
 
     const logoClass = `
-    h-10 w-10 mobile-lg:h-12 mobile-lg:w-12
+    h-10 w-10 mobile-lg:h-12 mobile-lg:w-12 laptop:h-16 laptop:w-16
     `
 
     const textClass = `

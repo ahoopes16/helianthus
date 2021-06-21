@@ -8,6 +8,10 @@
   --color-steel: #c8c8c8;
 }
 
+#root {
+  height: 100%;
+}
+
 body,
 html {
   background-color: var(--color-cream);
