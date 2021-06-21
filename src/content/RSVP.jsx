@@ -6,7 +6,7 @@ function RSVP() {
     const [guest, setGuest] = useState(null)
     const className = `
     text-center
-    text-sm mobile-md:text-base mobile-lg:text-lg tablet:text-xl laptop:text-2xl
+    text-sm mobile-md:text-base mobile-lg:text-lg tablet:text-xl laptop:text-2xl desktop:text-3xl
     `
 
     return (

@@ -4,21 +4,21 @@ import { NavLink } from 'react-router-dom'
 function Header({ showNavbar, toggleNavbar }) {
     const outerClass = `
     bg-navy text-parisienne flex items-center justify-start
-    h-16 mobile-lg:h-20
+    h-16 mobile-lg:h-20 desktop:h-24
     `
 
     const logoContainerClass = `
     flex justify-center items-center
-    h-16 w-20 mobile-lg:h-20 mobile-lg:w-24 laptop:w-40
+    h-16 w-20 mobile-lg:h-20 mobile-lg:w-24 laptop:w-40 desktop:h-24 desktop:w-48
     `
 
     const logoClass = `
-    h-10 w-10 mobile-lg:h-12 mobile-lg:w-12 laptop:h-16 laptop:w-16
+    h-10 w-10 mobile-lg:h-12 mobile-lg:w-12 laptop:h-16 laptop:w-16 desktop:h-20 desktop:w-20
     `
 
     const textClass = `
     m-auto text-center
-    text-lg mobile-md:text-xl mobile-lg:text-2xl tablet:text-4xl
+    text-lg mobile-md:text-xl mobile-lg:text-2xl tablet:text-4xl desktop:text-6xl
     `
 
     return (

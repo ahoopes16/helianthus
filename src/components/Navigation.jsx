@@ -7,8 +7,8 @@ function Navigation({ showNavbar, toggleNavbar }) {
     const location = useLocation()
     const mainClasses = `
     bg-navy text-center font-bold break-words
-    mobile-md:text-lg mobile-lg:text-xl
-    w-full laptop:w-40
+    mobile-md:text-lg mobile-lg:text-xl desktop:text-2xl
+    w-full laptop:w-40 desktop:w-48
     laptop:flex laptop:flex-col laptop:flex-none
     ${showNavbar ? 'flex flex-col' : 'hidden'}
     `
