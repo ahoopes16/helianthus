@@ -66,6 +66,15 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    backgroundColor: ({ after }) => after(['disabled']),
+    borderColor: ({ after }) => after(['disabled']),
+    borderOpacity: ({ after }) => after(['disabled']),
+    borderRadius: ({ after }) => after(['disabled', 'hover']),
+    borderStyle: ({ after }) => after(['disabled', 'hover']),
+    borderWidth: ({ after }) => after(['disabled', 'hover']),
+    cursor: ({ after }) => after(['disabled']),
+    textColor: ({ after }) => after(['disabled']),
+  },
   plugins: [],
 }

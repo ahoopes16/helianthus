@@ -1,26 +1,31 @@
 import { NavLink, useLocation } from 'react-router-dom'
 import { pages } from '../constants'
 
-function Navigation() {
+function Navigation({ showNavbar, toggleNavbar }) {
     const linkContainerBaseClass = 'py-5'
-    const linkClass = 'hover:underline'
     const selectedClass = 'text-navy bg-gold'
     const location = useLocation()
+    const mainClasses = `
+    bg-navy text-center font-bold break-words
+    md:text-2xl
+    w-full laptop:w-40
+    laptop:flex laptop:flex-col laptop:flex-none
+    ${showNavbar ? 'flex flex-col' : 'hidden'}
+    `
 
     return (
-        <div className='bg-navy text-center text-2xl font-bold break-words'>
-            <div className='flex flex-col pt-8'>
-                {pages.map(page => {
-                    const linkContainerClass = `${linkContainerBaseClass} ${location.pathname === page.path ? selectedClass : ''}`
+        <div className={mainClasses}>
+            {pages.map(page => {
+                const linkContainerClass = `${linkContainerBaseClass} ${location.pathname === page.path ? selectedClass : ''}`
+                const key = `nav-${page.title.toLowerCase().replace(' ', '-')}`
 
-                    return (
-                        <div key={`nav-${page.title.toLowerCase().replace(' ', '-')}`} className={linkContainerClass}>
-                            <NavLink className={linkClass} to={page.path}>{page.title}</NavLink>
-                        </div>
-                    )
-                }
-                )}
-            </div>
+                return (
+                    <NavLink key={key} className={`hover:underline ${linkContainerClass}`} onClick={toggleNavbar} to={page.path}>
+                        {page.title}
+                    </NavLink>
+                )
+            }
+            )}
         </div>
     )
 }
