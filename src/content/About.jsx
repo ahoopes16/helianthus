@@ -6,7 +6,7 @@ function About() {
     const Card = ({ children }) => {
         const className = `
         text-black bg-white shadow-md rounded-md
-        h-auto w-5/6
+        h-auto w-5/6 tablet:w-120
         p-5 my-4
         `
         return <div className={className}>{children}</div>
@@ -15,7 +15,7 @@ function About() {
     const CardHeader = ({ children }) => {
         const className = `
             text-cabernet text-center font-bold underline
-            text-lg
+            text-lg mobile-lg:text-xl
         `
         return <h2 className={className}>{children}</h2>
     }
@@ -23,6 +23,7 @@ function About() {
     const CardBody = ({ children }) => {
         const className=`
         ml-4
+        mobile-lg:text-lg
         `
         return <div className={className}>{children}</div>
     }

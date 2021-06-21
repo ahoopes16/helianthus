@@ -5,7 +5,7 @@ function ContentCard({ children }) {
     const innerClass = `
     bg-cream overflow
     laptop:shadow-2xl laptop:rounded-lg
-    w-full xl:h-200 xl:w-320
+    w-full
     `
     return (
         <div className={outerClass}>

@@ -17,7 +17,7 @@ function Travel() {
     const SectionHeader = ({ children }) => {
         const className = `
         text-cabernet font-bold
-        text-xl
+        text-xl mobile-lg:text-2xl
         `
         return <h2 className={className}>{children}</h2>
     }
@@ -39,7 +39,7 @@ function Travel() {
 
     const AirportInfoCard = ({ children }) => {
         const className = `
-        h-auto
+        h-auto tablet:w-80
         `
         return <div className={className}>{children}</div>
     }
@@ -47,7 +47,7 @@ function Travel() {
     const AirportName = ({ children }) => {
         const className = `
         text-cabernet underline
-        text-xl
+        text-xl mobile-lg:text-2xl
         `
         return <h3 className={className}>{children}</h3>
     }
@@ -85,7 +85,7 @@ function Travel() {
                             If you're unsure of where to buy tickets from, <Link href={SKYSCANNER_LINK}>SkyScanner</Link> has been a useful tool for us to compare airlines and find the cheapest flights.
                         </p>
 
-                        <div className='flex flex-wrap justify-around'>
+                        <div className='tablet:flex tablet:flex-wrap tablet:justify-around'>
                             <AirportInfoCard>
                                 <AirportName>Phoenix Sky Harbor</AirportName>
 

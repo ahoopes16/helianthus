@@ -4,10 +4,13 @@
 
 :root {
   font-size: 16px;
+  --color-cream: #fffde7;
+  --color-steel: #c8c8c8;
 }
 
-body, html {
-  background-color: #C8C8C8;
+body,
+html {
+  background-color: var(--color-cream);
   margin: 0;
   padding: 0;
   width: 100%;
@@ -15,16 +18,23 @@ body, html {
   box-sizing: border-box;
 }
 
+@media (min-width: 1024px) {
+  body,
+  html {
+    background-color: var(--color-steel);
+  }
+}
+
 * {
   box-sizing: inherit;
 }
 
 .text-parisienne {
-  font-family: 'Parisienne', cursive;
+  font-family: "Parisienne", cursive;
 }
 
 .text-roboto {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .overflow {

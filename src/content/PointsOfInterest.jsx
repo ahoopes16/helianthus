@@ -9,8 +9,8 @@ import {
 function PointsOfInterest() {
     const Section = ({ children }) => {
         const className = `
-        h-auto w-80
-        mb-6
+        h-auto tablet:w-48
+        mb-6 mx-1
         `
         return <div className={className}>{children}</div>
     }
@@ -25,7 +25,6 @@ function PointsOfInterest() {
 
     const SectionBody = ({ children }) => {
         const className = `
-        ml-2
         `
         return <div className={className}>{children}</div>
     }
@@ -48,7 +47,7 @@ function PointsOfInterest() {
                     They are all top-rated places to visit in each city, and are some of Alex and Nikki's favorite spots!
                 </p>
 
-                <div className='mb-8 flex flex-wrap justify-around'>
+                <div className='mb-8 tablet:flex tablet:flex-wrap tablet:justify-around'>
                     <Section>
                         <SectionHeader>Tucson, AZ</SectionHeader>
 

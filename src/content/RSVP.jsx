@@ -4,12 +4,16 @@ import { GuestSearch, RSVPForm } from '../components'
 
 function RSVP() {
     const [guest, setGuest] = useState(null)
+    const className = `
+    text-center
+    text-sm mobile-md:text-base mobile-lg:text-lg tablet:text-xl
+    `
 
     return (
         <Fragment>
             <ContentHeading>R.S.V.P.</ContentHeading>
 
-            <ContentBody className='text-center text-sm mobile:text-base'>
+            <ContentBody className={className}>
                 <GuestSearch setGuest={setGuest} />
                 {guest && <Fragment>
                     <hr className="my-5" />

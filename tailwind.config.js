@@ -65,11 +65,11 @@ module.exports = {
         '320': '80rem',
       },
       screens: {
-        'mobile': '375px',
-        'tablet': '425px',
-        'laptop': '768px',
-        'desktop': '1024px',
-        '4k': '1440px',
+        'mobile-md': '375px',
+        'mobile-lg': '425px',
+        'tablet': '768px',
+        'laptop': '1024px',
+        'desktop': '1440px',
       }
     },
   },

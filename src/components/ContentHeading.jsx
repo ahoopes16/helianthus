@@ -1,7 +1,7 @@
 function ContentHeading({ className, children }) {
     const consolidatedClass = `
     text-center text-cabernet text-parisienne
-    text-3xl
+    text-3xl mobile-lg:text-4xl
     mt-2
     ${className}
     `

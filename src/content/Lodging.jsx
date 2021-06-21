@@ -18,7 +18,7 @@ function Lodging() {
     const SectionHeader = ({ children }) => {
         const className = `
         text-cabernet font-bold
-        text-xl
+        text-xl tablet:text-2xl
         `
         return <h2 className={className}>{children}</h2>
     }

@@ -2,6 +2,7 @@ function ContentBody({ className, children }) {
     const consolidatedClass = `
     text-black
     my-5 px-6
+    mobile-lg:text-lg tablet:text-xl
     ${className}
     `
 
