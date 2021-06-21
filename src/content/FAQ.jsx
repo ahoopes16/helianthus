@@ -20,7 +20,7 @@ function FAQ() {
 
     const Answer = ({ children }) => {
         const className=`
-        ml-2
+        ml-2 mobile:ml-4
         `
         return <div className={className}>{children}</div>
     }

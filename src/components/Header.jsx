@@ -18,7 +18,7 @@ function Header({ showNavbar, toggleNavbar }) {
 
     const textClass = `
     m-auto text-center
-    text-lg
+    text-lg mobile:text-xl
     `
 
     return (
