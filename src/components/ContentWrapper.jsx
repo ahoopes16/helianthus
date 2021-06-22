@@ -1,6 +1,6 @@
 function ContentWrapper({ children }) {
     return (
-        <div className='text-roboto laptop:flex laptop:flex-1'>
+        <div className='text-roboto laptop-sm:flex laptop-sm:flex-1'>
             {children}
         </div>
     )

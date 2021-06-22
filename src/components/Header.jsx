@@ -9,11 +9,11 @@ function Header({ showNavbar, toggleNavbar }) {
 
     const logoContainerClass = `
     flex justify-center items-center
-    h-16 w-20 mobile-lg:h-20 mobile-lg:w-24 laptop:w-40 desktop:h-24 desktop:w-48
+    h-16 w-20 mobile-lg:h-20 mobile-lg:w-24 laptop-sm:w-40 desktop:h-24 desktop:w-48
     `
 
     const logoClass = `
-    h-10 w-10 mobile-lg:h-12 mobile-lg:w-12 laptop:h-16 laptop:w-16 desktop:h-20 desktop:w-20
+    h-10 w-10 mobile-lg:h-12 mobile-lg:w-12 laptop-sm:h-16 laptop-sm:w-16 desktop:h-20 desktop:w-20
     `
 
     const textClass = `
@@ -24,10 +24,10 @@ function Header({ showNavbar, toggleNavbar }) {
     return (
         <div className={outerClass}>
             <div className={logoContainerClass}>
-                <NavLink className='hidden laptop:block' to='/about'>
+                <NavLink className='hidden laptop-sm:block' to='/about'>
                     <img className={logoClass} src={logo} alt='Logo' />
                 </NavLink>
-                <div className='laptop:hidden'>
+                <div className='laptop-sm:hidden'>
                     <i className={`fas fa-bars text-gold text-xl mobile-lg:text-2xl ${showNavbar ? 'hidden' : ''}`} onClick={toggleNavbar}></i>
                     <i className={`fas fa-times text-gold text-xl mobile-lg:text-2xl ${showNavbar ? '' : 'hidden'}`} onClick={toggleNavbar}></i>
                 </div>

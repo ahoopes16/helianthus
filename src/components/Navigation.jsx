@@ -8,8 +8,8 @@ function Navigation({ showNavbar, toggleNavbar }) {
     const mainClasses = `
     bg-navy text-center font-bold break-words
     mobile-md:text-lg mobile-lg:text-xl desktop:text-2xl
-    w-full laptop:w-40 desktop:w-48
-    laptop:flex laptop:flex-col laptop:flex-none
+    w-full laptop-sm:w-40 desktop:w-48
+    laptop-sm:flex laptop-sm:flex-col laptop-sm:flex-none
     ${showNavbar ? 'flex flex-col' : 'hidden'}
     `
 

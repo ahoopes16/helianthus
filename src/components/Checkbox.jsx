@@ -4,7 +4,7 @@ function Checkbox({ label, onChange, value, ...props }) {
     const htmlName = convertToHTMLString(label)
     const innerClass = `
     ml-2
-    tablet:h-4 tablet:w-4 laptop:h-5 laptop:w-5
+    tablet:h-4 tablet:w-4 laptop-sm:h-5 laptop-sm:w-5
     `
 
     return (

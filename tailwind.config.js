@@ -66,13 +66,15 @@ module.exports = {
         '232': '58rem',
         '240': '60rem',
         '280': '70rem',
+        '304': '76rem',
         '320': '80rem',
       },
       screens: {
         'mobile-md': '375px',
         'mobile-lg': '425px',
         'tablet': '768px',
-        'laptop': '1024px',
+        'laptop-sm': '1024px',
+        'laptop-md': '1280px',
         'desktop': '1440px',
       }
     },

@@ -13,14 +13,14 @@ function FAQ() {
     const Question = ({ children }) => {
         const className=`
         text-cabernet font-bold
-        text-xl tablet:text-2xl laptop:text-3xl desktop:text-4xl
+        text-xl tablet:text-2xl laptop-sm:text-3xl desktop:text-4xl
         `
         return <h2 className={className}>{children}</h2>
     }
 
     const Answer = ({ children }) => {
         const className=`
-        ml-2 mobile-md:ml-4 laptop:ml-6
+        ml-2 mobile-md:ml-4 laptop-sm:ml-6
         `
         return <div className={className}>{children}</div>
     }

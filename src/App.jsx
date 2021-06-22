@@ -14,7 +14,7 @@ function App() {
 
   return (
     <HashRouter>
-      <div className='bg-cream laptop:bg-steel text-gold flex flex-col h-full'>
+      <div className='bg-cream laptop-sm:bg-steel text-gold flex flex-col h-full'>
         <Header showNavbar={showNavbar} toggleNavbar={toggleNavbar} />
 
         <ContentWrapper>
