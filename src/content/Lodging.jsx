@@ -9,23 +9,40 @@ import {
 
 function Lodging() {
     const Section = ({ children }) => {
-        return <div className='mb-6'>{children}</div>
+        const className = `
+        mb-6
+        `
+        return <div className={className}>{children}</div>
     }
 
     const SectionHeader = ({ children }) => {
-        return <h2 className='text-cabernet text-4xl font-bold'>{children}</h2>
+        const className = `
+        text-cabernet font-bold
+        text-xl tablet:text-2xl
+        `
+        return <h2 className={className}>{children}</h2>
     }
 
     const SectionBody = ({ children }) => {
-        return <div className='ml-10'>{children}</div>
+        const className = `
+        ml-4
+        `
+        return <div className={className}>{children}</div>
     }
 
     const Paragraph = ({ children }) => {
-        return <p className='mb-3'>{children}</p>
+        const className = `
+        mb-3
+        `
+        return <p className={className}>{children}</p>
     }
 
     const List = ({ children }) => {
-        return <ul className='ml-10 list-disc'>{children}</ul>
+        const className = `
+        list-disc
+        ml-8
+        `
+        return <ul className={className}>{children}</ul>
     }
 
     return (

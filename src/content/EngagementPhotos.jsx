@@ -4,7 +4,10 @@ import { ENGAGEMENT_PHOTOS_LINK, MPIX_LINK, SARAH_LINK } from '../constants'
 
 function EngagementPhotos() {
     const Section = ({ children }) => {
-        return <p className='mb-6'>{children}</p>
+        const className = `
+        mb-6
+        `
+        return <p className={className}>{children}</p>
     }
 
     return (

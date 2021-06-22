@@ -2,6 +2,7 @@ import { API, graphqlOperation } from 'aws-amplify'
 import { updateGuest } from '../graphql/mutations'
 import { generateErrorModal, generateSuccessModal } from '../helpers'
 import { Fragment, useState } from 'react'
+import Button from './Button'
 import Checkbox from './Checkbox'
 import { FoodOptions, YesNoOptions } from './select-options'
 import SelectBox from './SelectBox'
@@ -77,34 +78,38 @@ function RSVPForm({ guest }) {
         }
     }
 
+    const fieldClass = `
+    p-2
+    `
+
     return (
-        <form className="mt-10" id="rsvp-form">
-            <div className="flex flex-col items-start">
-                <SelectBox className="p-5" label="RSVP" value={rsvp} onChange={toggleRSVP}>
+        <form id='rsvp-form'>
+            <div className='flex flex-col items-start'>
+                <SelectBox className={fieldClass} label='RSVP' value={rsvp} onChange={toggleRSVP}>
                     <YesNoOptions />
                 </SelectBox>
 
-                <Checkbox className="p-5" label="Attending Rehearsal Dinner (Check if yes)" value={attendingRehearsalDinner} onChange={() => setAttendingRehearsalDinner(!attendingRehearsalDinner)} />
+                <Checkbox className={fieldClass} label='Attending Rehearsal Dinner (Check if yes)' value={attendingRehearsalDinner} onChange={() => setAttendingRehearsalDinner(!attendingRehearsalDinner)} />
 
-                <Checkbox className="p-5" label="Over Twenty-One Years Old (Check if yes)" value={overTwentyOne} onChange={() => setOverTwentyOne(!overTwentyOne)} />
+                <Checkbox className={fieldClass} label='Over Twenty-One Years Old (Check if yes)' value={overTwentyOne} onChange={() => setOverTwentyOne(!overTwentyOne)} />
 
-                <SelectBox className="p-5" label="Dinner" value={dinnerOption} onChange={event => setDinnerOption(event.target.value)}>
+                <SelectBox className={fieldClass} label='Dinner' value={dinnerOption} onChange={event => setDinnerOption(event.target.value)}>
                     <FoodOptions />
                 </SelectBox>
 
                 {plusOneAllowed && <Fragment>
-                    <TextBox className="p-5" label="Plus One Name (Leave blank if coming alone)" value={plusOneName} onChange={event => setPlusOneName(event.target.value)} />
+                    <TextBox className={fieldClass} label='Plus One Name (Leave blank if coming alone)' value={plusOneName} onChange={event => setPlusOneName(event.target.value)} />
 
-                    <SelectBox className="p-5" label="Plus One Dinner (Leave blank if coming alone)" value={plusOneDinner} onChange={event => setPlusOneDinner(event.target.value)}>
+                    <SelectBox className={fieldClass} label='Plus One Dinner' value={plusOneDinner} onChange={event => setPlusOneDinner(event.target.value)}>
                         <FoodOptions />
                     </SelectBox>
                 </Fragment>}
 
             </div>
 
-            <button className="generic-button rounded m-5" disabled={isSubmitDisabled()} type="submit" onClick={handleSubmit}>
+            <Button className='m-5' disabled={isSubmitDisabled()} type='submit' onClick={handleSubmit}>
                 Submit
-            </button>
+            </Button>
         </form>
     )
 }
