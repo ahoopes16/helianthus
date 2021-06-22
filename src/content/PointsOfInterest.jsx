@@ -8,19 +8,32 @@ import {
 
 function PointsOfInterest() {
     const Section = ({ children }) => {
-        return <div className='h-auto w-80 mb-8'>{children}</div>
+        const className = `
+        h-auto tablet:w-48
+        mb-6 mx-1
+        `
+        return <div className={className}>{children}</div>
     }
 
     const SectionHeader = ({ children }) => {
-        return <div className='text-cabernet text-3xl text-center underline'>{children}</div>
+        const className = `
+        text-cabernet underline
+        text-2xl
+        `
+        return <div className={className}>{children}</div>
     }
 
     const SectionBody = ({ children }) => {
-        return <div className='ml-10'>{children}</div>
+        const className = `
+        `
+        return <div className={className}>{children}</div>
     }
 
     const ListItem = ({ children }) => {
-        return <li className='py-1'>{children}</li>
+        const className = `
+        py-1
+        `
+        return <li className={className}>{children}</li>
     }
 
     return (
@@ -28,13 +41,13 @@ function PointsOfInterest() {
             <ContentHeading>Points Of Interest</ContentHeading>
 
             <ContentBody>
-                <p className='mb-20'>
+                <p className='mb-6'>
                     Thinking of staying for Columbus Day weekend? Or turning your stay into a vacation? We think that's a great idea!
                     Consider checking out these locations/points of interest.
                     They are all top-rated places to visit in each city, and are some of Alex and Nikki's favorite spots!
                 </p>
 
-                <div className='mb-8 flex flex-wrap justify-around'>
+                <div className='mb-8 tablet:flex tablet:flex-wrap tablet:justify-around'>
                     <Section>
                         <SectionHeader>Tucson, AZ</SectionHeader>
 

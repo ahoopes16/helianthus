@@ -4,15 +4,28 @@ import { WILD_HORSE_RANCH_LINK, WILD_HORSE_RANCH_ADDRESS_LINK } from '../constan
 
 function About() {
     const Card = ({ children }) => {
-        return <div className='text-black h-auto w-112 bg-white box-shadow p-5 mt-10'>{children}</div>
+        const className = `
+        text-black bg-white shadow-md rounded-md
+        h-auto w-5/6 tablet:w-120
+        p-5 my-4
+        `
+        return <div className={className}>{children}</div>
     }
 
     const CardHeader = ({ children }) => {
-        return <h2 className='text-cabernet text-center font-bold text-2xl underline'>{children}</h2>
+        const className = `
+            text-cabernet text-center font-bold underline
+            text-lg mobile-lg:text-xl laptop-sm:text-2xl desktop:text-3xl
+        `
+        return <h2 className={className}>{children}</h2>
     }
 
     const CardBody = ({ children }) => {
-        return <div className='ml-6 text-xl'>{children}</div>
+        const className=`
+        ml-4
+        mobile-lg:text-lg laptop-sm:text-xl desktop:text-2xl
+        `
+        return <div className={className}>{children}</div>
     }
 
     return (
@@ -29,7 +42,7 @@ function About() {
                         <p><strong>Address:&nbsp;</strong><Link href={WILD_HORSE_RANCH_ADDRESS_LINK}>6801 N Camino Verde, Tucson, AZ 85743</Link></p>
                         <br />
                         <p><strong>Timeline:</strong></p>
-                        <div className='px-6'>
+                        <div className='px-2'>
                             <p>Arrival begins at 4:00PM. Please <strong>do not</strong> come before 3:45.</p>
                             <p>The ceremony will run from 4:30-5:00PM.</p>
                             <p>Cocktail hour will be from 5:00-6:00PM.</p>
@@ -49,7 +62,7 @@ function About() {
                         <p><strong>Time:&nbsp;</strong>TBD</p>
                         <br />
                         <p><strong>Information:</strong></p>
-                        <div className='px-6'>
+                        <div className='px-2'>
                             <p>
                                 The rehearsal dinner will be very informal!
                                 We have rented out a hotel conference room and will have pizza, sandwiches, and drinks.
