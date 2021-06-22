@@ -1,6 +1,11 @@
 import { Fragment } from 'react'
 import { ContentHeading, Link } from '../components'
-import { WILD_HORSE_RANCH_LINK, WILD_HORSE_RANCH_ADDRESS_LINK } from '../constants'
+import {
+    HOLIDAY_INN_WEBSITE_LINK,
+    HOLIDAY_INN_LINK,
+    WILD_HORSE_RANCH_LINK,
+    WILD_HORSE_RANCH_ADDRESS_LINK,
+} from '../constants'
 
 function About() {
     const Card = ({ children }) => {
@@ -57,9 +62,9 @@ function About() {
 
                     <CardBody>
                         <p><strong>Date:&nbsp;</strong>Thursday, October 7th, 2021</p>
-                        <p><strong>Location:&nbsp;</strong>TBD</p>
-                        <p><strong>Address:&nbsp;</strong>TBD</p>
-                        <p><strong>Time:&nbsp;</strong>TBD</p>
+                        <p><strong>Location:&nbsp;</strong><Link href={HOLIDAY_INN_WEBSITE_LINK}>Holiday Inn Express &#38; Suites Tucson North - Marana</Link></p>
+                        <p><strong>Address:&nbsp;</strong><Link href={HOLIDAY_INN_LINK}>8373 N Crack Barrel Rd, Tucson, AZ 85743</Link></p>
+                        <p><strong>Time:&nbsp;</strong>5:00PM</p>
                         <br />
                         <p><strong>Information:</strong></p>
                         <div className='px-2'>
