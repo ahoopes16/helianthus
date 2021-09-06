@@ -87,6 +87,7 @@ function RSVPForm({ guest }) {
 
     return (
         <form id='rsvp-form'>
+            <h4 className="underline pb-4">RSVP Information for {guest.firstName} {guest.lastName}</h4>
             <div className='flex flex-col items-start'>
                 <SelectBox className={fieldClass} label='RSVP' value={rsvp} onChange={toggleRSVP}>
                     <YesNoOptions />
