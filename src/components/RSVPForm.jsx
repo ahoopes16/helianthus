@@ -50,7 +50,10 @@ function RSVPForm({ guest }) {
     }
 
     const isSubmitDisabled = () => {
-        return !rsvp || !dinnerOption
+        if (!rsvp) return true
+        if (rsvp === YesNoValues.NO) return false
+
+        return !dinnerOption
     }
 
     const handleSubmit = async (event) => {
