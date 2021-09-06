@@ -4,7 +4,7 @@ import { generateErrorModal, generateSuccessModal } from '../helpers'
 import { Fragment, useState } from 'react'
 import Button from './Button'
 import Checkbox from './Checkbox'
-import { FoodOptions, YesNoOptions } from './select-options'
+import { FoodOptions, YesNoOptions, YesNoValues } from './select-options'
 import SelectBox from './SelectBox'
 import TextBox from './TextBox'
 
@@ -42,7 +42,7 @@ function RSVPForm({ guest }) {
         const newRsvp = event.target.value
         setRsvp(newRsvp)
 
-        if (newRsvp === 'Yes') {
+        if (newRsvp === YesNoValues.YES) {
             setRsvpDate(new Date().toISOString().split('T')[0])
         } else {
             setRsvpDate(new Date('2000-01-01').toISOString().split('T')[0])
@@ -50,7 +50,10 @@ function RSVPForm({ guest }) {
     }
 
     const isSubmitDisabled = () => {
-        return !rsvp || !dinnerOption
+        if (!rsvp) return true
+        if (rsvp === YesNoValues.NO) return false
+
+        return !dinnerOption
     }
 
     const handleSubmit = async (event) => {
