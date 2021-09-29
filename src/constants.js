@@ -35,9 +35,9 @@ export const SKYSCANNER_LINK = 'https://www.skyscanner.com/'
 
 // Lodging Links
 export const HOLIDAY_INN_WEBSITE_LINK = 'https://www.ihg.com/holidayinnexpress/hotels/us/en/tucson/mracr/hoteldetail'
-export const HOLIDAY_INN_LINK = 'https://www.google.com/maps/dir//holiday+inn+express+tucson+north+marana/@32.358541,-111.1279018,13z/data=!3m1!5s0x86d60a9e0f314aa1:0x70ede6f901f381ab!4m8!4m7!1m0!1m5!1m1!1s0x86d60a9e0b4bd699:0x3afb12d66de80a5a!2m2!1d-111.0928824!2d32.3584733'
+export const HOLIDAY_INN_MAPS_LINK = 'https://www.google.com/maps/dir//holiday+inn+express+tucson+north+marana/@32.358541,-111.1279018,13z/data=!3m1!5s0x86d60a9e0f314aa1:0x70ede6f901f381ab!4m8!4m7!1m0!1m5!1m1!1s0x86d60a9e0b4bd699:0x3afb12d66de80a5a!2m2!1d-111.0928824!2d32.3584733'
 export const HOLIDAY_INN_PHONE = 'tel:5205724777'
-export const COMFORT_INN_LINK = 'https://www.choicehotels.com/arizona/tucson/comfort-inn-hotels/az178?source=gyxt'
+export const COMFORT_INN_WEBSITE_LINK = 'https://www.choicehotels.com/arizona/tucson/comfort-inn-hotels/az178?mc=llgoxxpx'
 export const COMFORT_INN_PHONE = 'tel:5205791099'
 export const LA_QUINTA_INN_LINK = 'https://www.wyndhamhotels.com/laquinta/tucson-arizona/la-quinta-nw-tucson-marana/overview?CID=LC:LQ::GGL:RIO:National:10989&iata=00093796'
 export const LA_QUINTA_INN_PHONE = 'tel:5205724235'
