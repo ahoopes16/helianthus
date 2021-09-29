@@ -1,8 +1,8 @@
 import { Fragment } from 'react'
 import { ContentBody, ContentHeading, Link } from '../components'
 import {
-    HOLIDAY_INN_LINK, HOLIDAY_INN_PHONE,
-    COMFORT_INN_LINK, COMFORT_INN_PHONE,
+    HOLIDAY_INN_MAPS_LINK, HOLIDAY_INN_PHONE,
+    COMFORT_INN_WEBSITE_LINK, COMFORT_INN_PHONE,
     LA_QUINTA_INN_LINK, LA_QUINTA_INN_PHONE,
     AIR_BNB_LINK,
 } from '../constants'
@@ -60,7 +60,7 @@ function Lodging() {
                         </Paragraph>
 
                         <Paragraph>
-                            We have booked a hotel block at the <Link href={HOLIDAY_INN_LINK}>Holiday Inn Express &#38; Suites Tucson North - Marana</Link>.
+                            We have booked a hotel block at the <Link href={HOLIDAY_INN_MAPS_LINK}>Holiday Inn Express &#38; Suites Tucson North - Marana</Link>.
                             There is a discounted rate for each room under our block. Each room is $84 plus tax per night.
                             We have them booked for Thursday, the 7th and Friday, the 8th, but you can extend or shorten your stay in them.
                         </Paragraph>
@@ -87,7 +87,7 @@ function Lodging() {
                         </Paragraph>
 
                         <List>
-                            <li><Link href={COMFORT_INN_LINK}>Comfort Inn &#38; Suites North Tucson - Marana</Link> &#8901; <Link href={COMFORT_INN_PHONE}>(520) 579-1099</Link></li>
+                            <li><Link href={COMFORT_INN_WEBSITE_LINK}>Comfort Inn &#38; Suites North Tucson - Marana</Link> &#8901; <Link href={COMFORT_INN_PHONE}>(520) 579-1099</Link></li>
                             <li><Link href={LA_QUINTA_INN_LINK}>La Quinta Inn &#38; Suites by Wyndham</Link> &#8901; <Link href={LA_QUINTA_INN_PHONE}>(520) 572-4235</Link></li>
                         </List>
                     </SectionBody>

@@ -1,8 +1,8 @@
 import { Fragment } from 'react'
 import { ContentHeading, Link } from '../components'
 import {
-    HOLIDAY_INN_WEBSITE_LINK,
-    HOLIDAY_INN_LINK,
+    COMFORT_INN_WEBSITE_LINK,
+    COMFORT_INN_MAPS_LINK,
     WILD_HORSE_RANCH_LINK,
     WILD_HORSE_RANCH_ADDRESS_LINK,
 } from '../constants'
@@ -62,15 +62,15 @@ function About() {
 
                     <CardBody>
                         <p><strong>Date:&nbsp;</strong>Thursday, October 7th, 2021</p>
-                        <p><strong>Location:&nbsp;</strong><Link href={HOLIDAY_INN_WEBSITE_LINK}>Holiday Inn Express &#38; Suites Tucson North - Marana</Link></p>
-                        <p><strong>Address:&nbsp;</strong><Link href={HOLIDAY_INN_LINK}>8373 N Crack Barrel Rd, Tucson, AZ 85743</Link></p>
-                        <p><strong>Time:&nbsp;</strong>5:00PM</p>
+                        <p><strong>Location:&nbsp;</strong><Link href={COMFORT_INN_WEBSITE_LINK}>Comfort Inn &#38; Suites Tucson North - Marana</Link></p>
+                        <p><strong>Address:&nbsp;</strong><Link href={COMFORT_INN_MAPS_LINK}>8425 N Crack Barrel Rd, Tucson, AZ 85743</Link></p>
+                        <p><strong>Time:&nbsp;</strong>5:00PM to 8:00PM</p>
                         <br />
                         <p><strong>Information:</strong></p>
                         <div className='px-2'>
                             <p>
                                 The rehearsal dinner will be very informal!
-                                We have rented out a hotel conference room and will have pizza, sandwiches, and drinks.
+                                We have rented out the breakfast area in the nearby Comfort Inn and will have pizza, sandwiches, and drinks.
                                 If you are in town Thursday night, please feel free to pop in and join us. There is no dress code.
                                 We would just love to see you and say hi before our big day. :)
                             </p>
